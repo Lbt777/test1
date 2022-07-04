@@ -10010,11 +10010,11 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/zombiefigureui.exml'] = window.skins.GameUI = (function (_super) {
-	__extends(GameUI, _super);
-	var GameUI$Skin50 = 	(function (_super) {
-		__extends(GameUI$Skin50, _super);
-		function GameUI$Skin50() {
+})(eui.Skin);generateEUI.paths['resource/ui/zombiefigureui.exml'] = window.skins.Gameui = (function (_super) {
+	__extends(Gameui, _super);
+	var Gameui$Skin50 = 	(function (_super) {
+		__extends(Gameui$Skin50, _super);
+		function Gameui$Skin50() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10033,7 +10033,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin50.prototype;
+		var _proto = Gameui$Skin50.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10049,12 +10049,12 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin50;
+		return Gameui$Skin50;
 	})(eui.Skin);
 
-	var GameUI$Skin51 = 	(function (_super) {
-		__extends(GameUI$Skin51, _super);
-		function GameUI$Skin51() {
+	var Gameui$Skin51 = 	(function (_super) {
+		__extends(Gameui$Skin51, _super);
+		function Gameui$Skin51() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10073,7 +10073,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin51.prototype;
+		var _proto = Gameui$Skin51.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10089,12 +10089,12 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin51;
+		return Gameui$Skin51;
 	})(eui.Skin);
 
-	var GameUI$Skin52 = 	(function (_super) {
-		__extends(GameUI$Skin52, _super);
-		function GameUI$Skin52() {
+	var Gameui$Skin52 = 	(function (_super) {
+		__extends(Gameui$Skin52, _super);
+		function Gameui$Skin52() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10113,7 +10113,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin52.prototype;
+		var _proto = Gameui$Skin52.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10129,12 +10129,12 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin52;
+		return Gameui$Skin52;
 	})(eui.Skin);
 
-	var GameUI$Skin53 = 	(function (_super) {
-		__extends(GameUI$Skin53, _super);
-		function GameUI$Skin53() {
+	var Gameui$Skin53 = 	(function (_super) {
+		__extends(Gameui$Skin53, _super);
+		function Gameui$Skin53() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10153,7 +10153,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin53.prototype;
+		var _proto = Gameui$Skin53.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10169,12 +10169,12 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin53;
+		return Gameui$Skin53;
 	})(eui.Skin);
 
-	var GameUI$Skin54 = 	(function (_super) {
-		__extends(GameUI$Skin54, _super);
-		function GameUI$Skin54() {
+	var Gameui$Skin54 = 	(function (_super) {
+		__extends(Gameui$Skin54, _super);
+		function Gameui$Skin54() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10193,7 +10193,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin54.prototype;
+		var _proto = Gameui$Skin54.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10209,12 +10209,12 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin54;
+		return Gameui$Skin54;
 	})(eui.Skin);
 
-	var GameUI$Skin55 = 	(function (_super) {
-		__extends(GameUI$Skin55, _super);
-		function GameUI$Skin55() {
+	var Gameui$Skin55 = 	(function (_super) {
+		__extends(Gameui$Skin55, _super);
+		function Gameui$Skin55() {
 			_super.call(this);
 			this.skinParts = ["labelDisplay"];
 			
@@ -10233,7 +10233,7 @@ window.skins=window.skins||{};
 					])
 			];
 		}
-		var _proto = GameUI$Skin55.prototype;
+		var _proto = Gameui$Skin55.prototype;
 
 		_proto._Image1_i = function () {
 			var t = new eui.Image();
@@ -10249,10 +10249,10 @@ window.skins=window.skins||{};
 			t.verticalCenter = 0;
 			return t;
 		};
-		return GameUI$Skin55;
+		return Gameui$Skin55;
 	})(eui.Skin);
 
-	function GameUI() {
+	function Gameui() {
 		_super.call(this);
 		this.skinParts = ["image_head","image_eye","image_right_hand_1","image_shirt","image_left_hand_1","image_left_hand_2","image_right_hand_2","image_right_hand_3","image_left_hand_3","bitmapLabel_buff_num","group_hp","group_zombie","btn_head","btn_eye","btn_shirt","btn_head_color","btn_eye_color","btn_shirt_color"];
 		
@@ -10260,7 +10260,7 @@ window.skins=window.skins||{};
 		this.width = 400;
 		this.elementsContent = [this._Rect1_i(),this.group_zombie_i(),this._Group1_i()];
 	}
-	var _proto = GameUI.prototype;
+	var _proto = Gameui.prototype;
 
 	_proto._Rect1_i = function () {
 		var t = new eui.Rect();
@@ -10293,7 +10293,7 @@ window.skins=window.skins||{};
 		t.height = 2001;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_head-2.png";
+		t.source = "resource/assets/ui/figure/figure_head-2.png";
 		t.visible = true;
 		t.width = 2001;
 		t.x = 0;
@@ -10306,7 +10306,7 @@ window.skins=window.skins||{};
 		t.height = 641;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_eyes-1.png";
+		t.source = "resource/assets/ui/figure/figure_eyes-1.png";
 		t.visible = true;
 		t.width = 1001;
 		t.x = 632;
@@ -10319,7 +10319,7 @@ window.skins=window.skins||{};
 		t.height = 481;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right-upper-arm-1.png";
+		t.source = "resource/assets/ui/figure/figure_right-upper-arm-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 785.636;
@@ -10331,7 +10331,7 @@ window.skins=window.skins||{};
 		t.height = 361;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right-leg-1.png";
+		t.source = "resource/assets/ui/figure/figure_right-leg-1.png";
 		t.visible = true;
 		t.width = 301;
 		t.x = 451.612;
@@ -10343,7 +10343,7 @@ window.skins=window.skins||{};
 		t.height = 481;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_left-thigh-1.png";
+		t.source = "resource/assets/ui/figure/figure_left-thigh-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 418.255;
@@ -10355,7 +10355,7 @@ window.skins=window.skins||{};
 		t.height = 361;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right-leg-1.png";
+		t.source = "resource/assets/ui/figure/figure_right-leg-1.png";
 		t.visible = true;
 		t.width = 301;
 		t.x = 731.036;
@@ -10367,7 +10367,7 @@ window.skins=window.skins||{};
 		t.height = 481;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right-thigh-1.png";
+		t.source = "resource/assets/ui/figure/figure_right-thigh-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 665.638;
@@ -10380,7 +10380,7 @@ window.skins=window.skins||{};
 		t.height = 801;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_shirt-2.png";
+		t.source = "resource/assets/ui/figure/figure_shirt-2.png";
 		t.visible = true;
 		t.width = 801;
 		t.x = 311.091;
@@ -10393,7 +10393,7 @@ window.skins=window.skins||{};
 		t.height = 481;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_left-upper-arm-1.png";
+		t.source = "resource/assets/ui/figure/figure_left-upper-arm-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 564.597;
@@ -10406,7 +10406,7 @@ window.skins=window.skins||{};
 		t.height = 221;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_left-forearm-1.png";
+		t.source = "resource/assets/ui/figure/figure_left-forearm-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 717.017;
@@ -10419,7 +10419,7 @@ window.skins=window.skins||{};
 		t.height = 221;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right-forearm-1.png";
+		t.source = "resource/assets/ui/figure/figure_right-forearm-1.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 901.155;
@@ -10432,7 +10432,7 @@ window.skins=window.skins||{};
 		t.height = 221;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_right_hand.png";
+		t.source = "resource/assets/ui/figure/figure_right_hand.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 1102.662;
@@ -10445,7 +10445,7 @@ window.skins=window.skins||{};
 		t.height = 221;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_left_hand.png";
+		t.source = "resource/assets/ui/figure/figure_left_hand.png";
 		t.visible = true;
 		t.width = 401;
 		t.x = 914.97;
@@ -10457,7 +10457,7 @@ window.skins=window.skins||{};
 		t.height = 241;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "resource/assets/UI/figure/figure_left-feet.png";
+		t.source = "resource/assets/ui/figure/figure_left-feet.png";
 		t.visible = true;
 		t.width = 361;
 		t.x = 441.565;
@@ -10469,7 +10469,7 @@ window.skins=window.skins||{};
 		t.height = 241;
 		t.scaleX = 0.8;
 		t.scaleY = 0.8;
-		t.source = "resource/assets/UI/figure/figure_right-feet.png";
+		t.source = "resource/assets/ui/figure/figure_right-feet.png";
 		t.visible = true;
 		t.width = 382.645;
 		t.x = 754.595;
@@ -10481,7 +10481,7 @@ window.skins=window.skins||{};
 		t.height = 401;
 		t.scaleX = 0.8;
 		t.scaleY = 0.8;
-		t.source = "resource/assets/UI/figure/figure_mouth-1.png";
+		t.source = "resource/assets/ui/figure/figure_mouth-1.png";
 		t.visible = true;
 		t.width = 501;
 		t.x = 999;
@@ -10541,7 +10541,7 @@ window.skins=window.skins||{};
 		t.label = "Head";
 		t.x = 200;
 		t.y = 243;
-		t.skinName = GameUI$Skin50;
+		t.skinName = Gameui$Skin50;
 		return t;
 	};
 	_proto.btn_eye_i = function () {
@@ -10550,7 +10550,7 @@ window.skins=window.skins||{};
 		t.label = "Eye";
 		t.x = 410.36;
 		t.y = 243.996;
-		t.skinName = GameUI$Skin51;
+		t.skinName = Gameui$Skin51;
 		return t;
 	};
 	_proto.btn_shirt_i = function () {
@@ -10559,7 +10559,7 @@ window.skins=window.skins||{};
 		t.label = "Shirt";
 		t.x = 613.966;
 		t.y = 244.991;
-		t.skinName = GameUI$Skin52;
+		t.skinName = Gameui$Skin52;
 		return t;
 	};
 	_proto.btn_head_color_i = function () {
@@ -10568,7 +10568,7 @@ window.skins=window.skins||{};
 		t.label = "皮肤";
 		t.x = 200;
 		t.y = 153;
-		t.skinName = GameUI$Skin53;
+		t.skinName = Gameui$Skin53;
 		return t;
 	};
 	_proto.btn_eye_color_i = function () {
@@ -10577,7 +10577,7 @@ window.skins=window.skins||{};
 		t.label = "Eye Color";
 		t.x = 410.36;
 		t.y = 153.996;
-		t.skinName = GameUI$Skin54;
+		t.skinName = Gameui$Skin54;
 		return t;
 	};
 	_proto.btn_shirt_color_i = function () {
@@ -10586,8 +10586,8 @@ window.skins=window.skins||{};
 		t.label = "Shirt Color";
 		t.x = 613.966;
 		t.y = 154.991;
-		t.skinName = GameUI$Skin55;
+		t.skinName = Gameui$Skin55;
 		return t;
 	};
-	return GameUI;
+	return Gameui;
 })(eui.Skin);
