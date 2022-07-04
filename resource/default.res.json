@@ -1,0 +1,446 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,ZombieMysteryBox_json,figure_eyes-1_png,figure_eyes-2_png,figure_head-1_png,figure_head-2_png,torso-1@2x_png,figure_eyes-3_png,figure_eyes-4_png,figure_eyes-5_png,figure_eyes-6_png,figure_eyes-7_png,figure_eyes-8_png,figure_eyes-9_png,figure_eyes-10_png,figure_eyes-11_png,figure_head-3_png,figure_head-4_png,figure_head-5_png,figure_head-6_png,figure_head-7_png,figure_head-8_png,figure_shirt-1_png,figure_shirt-2_png,figure_shirt-3_png,figure_shirt-4_png,figure_shirt-5_png,figure_shirt-6_png,figure_left-forearm-1_png,figure_right-forearm-1_png,figure_left-upper-arm-1_png,figure_right-upper-arm-1_png,figure_left_hand_png,figure_right_hand_png,figure_left-leg-1_png,figure_left-thigh-1_png,figure_right-leg-1_png,figure_right-thigh-1_png,figure_left-feet_png,figure_right-feet_png,figure_mouth-1_png,FigureUI_json,atlas_game_44_png,atlas_game_39_png,atlas_game_40_png,atlas_game_41_png,atlas_game_42_png,atlas_game_43_png,market_json,NFT_json,FriendUI_json,breed_json,zombieToken_json,MainUI_json,bg_mp3,numberFont_fnt,effect_1_json,effect_1_png,GameUI_json,GameUI2_json,MarketUI_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "contract/ZombieMysteryBox.json",
+			"type": "json",
+			"name": "ZombieMysteryBox_json"
+		},
+		{
+			"url": "assets/UI/FigureUI.json",
+			"type": "sheet",
+			"name": "FigureUI_json",
+			"subkeys": "figure_eyes-1,figure_eyes-2,figure_head-1,figure_head-2"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-1.png",
+			"type": "image",
+			"name": "figure_eyes-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-2.png",
+			"type": "image",
+			"name": "figure_eyes-2_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-1.png",
+			"type": "image",
+			"name": "figure_head-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-2.png",
+			"type": "image",
+			"name": "figure_head-2_png"
+		},
+		{
+			"url": "assets/UI/figure/torso-1@2x.png",
+			"type": "image",
+			"name": "torso-1@2x_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-3.png",
+			"type": "image",
+			"name": "figure_eyes-3_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-4.png",
+			"type": "image",
+			"name": "figure_eyes-4_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-5.png",
+			"type": "image",
+			"name": "figure_eyes-5_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-6.png",
+			"type": "image",
+			"name": "figure_eyes-6_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-7.png",
+			"type": "image",
+			"name": "figure_eyes-7_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-8.png",
+			"type": "image",
+			"name": "figure_eyes-8_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-9.png",
+			"type": "image",
+			"name": "figure_eyes-9_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-10.png",
+			"type": "image",
+			"name": "figure_eyes-10_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_eyes-11.png",
+			"type": "image",
+			"name": "figure_eyes-11_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-3.png",
+			"type": "image",
+			"name": "figure_head-3_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-4.png",
+			"type": "image",
+			"name": "figure_head-4_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-5.png",
+			"type": "image",
+			"name": "figure_head-5_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-6.png",
+			"type": "image",
+			"name": "figure_head-6_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-7.png",
+			"type": "image",
+			"name": "figure_head-7_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_head-8.png",
+			"type": "image",
+			"name": "figure_head-8_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-1.png",
+			"type": "image",
+			"name": "figure_shirt-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-2.png",
+			"type": "image",
+			"name": "figure_shirt-2_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-3.png",
+			"type": "image",
+			"name": "figure_shirt-3_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-4.png",
+			"type": "image",
+			"name": "figure_shirt-4_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-5.png",
+			"type": "image",
+			"name": "figure_shirt-5_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_shirt-6.png",
+			"type": "image",
+			"name": "figure_shirt-6_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left-forearm-1.png",
+			"type": "image",
+			"name": "figure_left-forearm-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right-forearm-1.png",
+			"type": "image",
+			"name": "figure_right-forearm-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left-upper-arm-1.png",
+			"type": "image",
+			"name": "figure_left-upper-arm-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right-upper-arm-1.png",
+			"type": "image",
+			"name": "figure_right-upper-arm-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left_hand.png",
+			"type": "image",
+			"name": "figure_left_hand_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right_hand.png",
+			"type": "image",
+			"name": "figure_right_hand_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left-leg-1.png",
+			"type": "image",
+			"name": "figure_left-leg-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left-thigh-1.png",
+			"type": "image",
+			"name": "figure_left-thigh-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right-leg-1.png",
+			"type": "image",
+			"name": "figure_right-leg-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right-thigh-1.png",
+			"type": "image",
+			"name": "figure_right-thigh-1_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_left-feet.png",
+			"type": "image",
+			"name": "figure_left-feet_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_right-feet.png",
+			"type": "image",
+			"name": "figure_right-feet_png"
+		},
+		{
+			"url": "assets/UI/figure/figure_mouth-1.png",
+			"type": "image",
+			"name": "figure_mouth-1_png"
+		},
+		{
+			"url": "assets/UI/MainUI.json",
+			"type": "sheet",
+			"name": "MainUI_json",
+			"subkeys": "atlas_main_1,atlas_main_10,atlas_main_11,atlas_main_12,atlas_main_13,atlas_main_14,atlas_main_2,atlas_main_3,atlas_main_4,atlas_main_5,atlas_main_6,atlas_main_7,atlas_main_8,atlas_main_9"
+		},
+		{
+			"url": "assets/UI/GameUI.json",
+			"type": "sheet",
+			"name": "GameUI_json",
+			"subkeys": "atlas_game_1,atlas_game_10,atlas_game_11,atlas_game_12,atlas_game_14,atlas_game_15,atlas_game_16,atlas_game_17,atlas_game_18,atlas_game_19,atlas_game_2,atlas_game_20,atlas_game_21,atlas_game_22,atlas_game_23,atlas_game_24,atlas_game_25,atlas_game_26,atlas_game_27,atlas_game_28,atlas_game_29,atlas_game_3,atlas_game_31,atlas_game_32,atlas_game_33,atlas_game_34,atlas_game_35,atlas_game_36,atlas_game_37,atlas_game_38,atlas_game_39,atlas_game_4,atlas_game_40,atlas_game_41,atlas_game_42,atlas_game_43,atlas_game_44,atlas_game_45,atlas_game_46,atlas_game_47,atlas_game_48,atlas_game_49,atlas_game_5,atlas_game_50,atlas_game_51,atlas_game_52,atlas_game_6,atlas_game_7,atlas_game_8,atlas_game_9"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_44.png",
+			"type": "image",
+			"name": "atlas_game_44_png"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_39.png",
+			"type": "image",
+			"name": "atlas_game_39_png"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_40.png",
+			"type": "image",
+			"name": "atlas_game_40_png"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_41.png",
+			"type": "image",
+			"name": "atlas_game_41_png"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_42.png",
+			"type": "image",
+			"name": "atlas_game_42_png"
+		},
+		{
+			"url": "assets/UI/figure/atlas_game_43.png",
+			"type": "image",
+			"name": "atlas_game_43_png"
+		},
+		{
+			"url": "contract/market.json",
+			"type": "json",
+			"name": "market_json"
+		},
+		{
+			"url": "contract/NFT.json",
+			"type": "json",
+			"name": "NFT_json"
+		},
+		{
+			"url": "assets/UI/MarketUI.json",
+			"type": "sheet",
+			"name": "MarketUI_json",
+			"subkeys": "atlas_mark_1,atlas_mark_10,atlas_mark_11,atlas_mark_12,atlas_mark_13,atlas_mark_14,atlas_mark_15,atlas_mark_16,atlas_mark_17,atlas_mark_18,atlas_mark_19,atlas_mark_2,atlas_mark_20,atlas_mark_21,atlas_mark_22,atlas_mark_29,atlas_mark_3,atlas_mark_4,atlas_mark_5,atlas_mark_6,atlas_mark_7,atlas_mark_8,atlas_mark_9"
+		},
+		{
+			"url": "assets/UI/GameUI2.json",
+			"type": "sheet",
+			"name": "GameUI2_json",
+			"subkeys": "atlas_game2_1,atlas_game2_10,atlas_game2_11,atlas_game2_12,atlas_game2_13,atlas_game2_14,atlas_game2_15,atlas_game2_16,atlas_game2_17,atlas_game2_18,atlas_game2_2,atlas_game2_3,atlas_game2_4,atlas_game2_5,atlas_game2_6,atlas_game2_7,atlas_game2_8,atlas_game2_9"
+		},
+		{
+			"url": "assets/UI/FriendUI.json",
+			"type": "sheet",
+			"name": "FriendUI_json",
+			"subkeys": "atlas_friend_1,atlas_friend_10,atlas_friend_2,atlas_friend_3,atlas_friend_4,atlas_friend_5,atlas_friend_6,atlas_friend_7,atlas_friend_8,atlas_friend_9"
+		},
+		{
+			"url": "contract/breed.json",
+			"type": "json",
+			"name": "breed_json"
+		},
+		{
+			"url": "contract/zombieToken.json",
+			"type": "json",
+			"name": "zombieToken_json"
+		},
+		{
+			"url": "assets/bg.mp3",
+			"type": "sound",
+			"name": "bg_mp3"
+		},
+		{
+			"url": "assets/UI/numberFont.fnt",
+			"type": "font",
+			"name": "numberFont_fnt"
+		},
+		{
+			"url": "assets/UI/effect_1.json",
+			"type": "json",
+			"name": "effect_1_json"
+		},
+		{
+			"url": "assets/UI/effect_1.png",
+			"type": "image",
+			"name": "effect_1_png"
+		}
+	]
+}
