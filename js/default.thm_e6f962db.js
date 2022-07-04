@@ -4306,7 +4306,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/gamepopInfoui.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamepopinfoui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin24 = 	(function (_super) {
 		__extends(GameUI$Skin24, _super);

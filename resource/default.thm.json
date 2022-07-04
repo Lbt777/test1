@@ -42,7 +42,7 @@
 		"resource/ui/gamegettokenui.exml",
 		"resource/ui/gamegetzombieui.exml",
 		"resource/ui/gamemyzombieui.exml",
-		"resource/ui/gamepopInfoui.exml",
+		"resource/ui/gamepopinfoui.exml",
 		"resource/ui/gamesellpopui.exml",
 		"resource/ui/gamespeedtrainui.exml",
 		"resource/ui/gameui.exml",
