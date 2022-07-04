@@ -10,7 +10,7 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/buttonskin.exml","eui.CheckBox":"resource/eui_skins/checkboxskin.exml","eui.HScrollBar":"resource/eui_skins/hscrollbarskin.exml","eui.HSlider":"resource/eui_skins/hsliderskin.exml","eui.Panel":"resource/eui_skins/panelskin.exml","eui.TextInput":"resource/eui_skins/textinputskin.exml","eui.ProgressBar":"resource/eui_skins/progressbarskin.exml","eui.RadioButton":"resource/eui_skins/radiobuttonskin.exml","eui.Scroller":"resource/eui_skins/scrollerskin.exml","eui.ToggleSwitch":"resource/eui_skins/toggleswitchskin.exml","eui.VScrollBar":"resource/eui_skins/vscrollbarskin.exml","eui.VSlider":"resource/eui_skins/vsliderskin.exml","eui.ItemRenderer":"resource/eui_skins/itemrendererskin.exml","MainUI":"resource/ui/mainui.exml","test":"resource/ui/test.exml","test2":"resource/eui_skins/test2.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/buttonskin.exml","eui.CheckBox":"resource/eui_skins/checkboxskin.exml","eui.HScrollBar":"resource/eui_skins/hscrollbarskin.exml","eui.HSlider":"resource/eui_skins/hsliderskin.exml","eui.Panel":"resource/eui_skins/panelskin.exml","eui.TextInput":"resource/eui_skins/textinputskin.exml","eui.ProgressBar":"resource/eui_skins/progressbarskin.exml","eui.RadioButton":"resource/eui_skins/radiobuttonskin.exml","eui.Scroller":"resource/eui_skins/scrollerskin.exml","eui.ToggleSwitch":"resource/eui_skins/toggleswitchskin.exml","eui.VScrollBar":"resource/eui_skins/vscrollbarskin.exml","eui.VSlider":"resource/eui_skins/vsliderskin.exml","eui.ItemRenderer":"resource/eui_skins/itemrendererskin.exml","MainUI":"resource/ui/mainui.exml","test":"resource/ui/test.exml","test2":"resource/eui_skins/test2.exml"};generateEUI.paths['resource/eui_skins/buttonskin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -67,7 +67,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ButtonSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/CheckBoxSkin.exml'] = window.skins.CheckBoxSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/checkboxskin.exml'] = window.skins.CheckBoxSkin = (function (_super) {
 	__extends(CheckBoxSkin, _super);
 	function CheckBoxSkin() {
 		_super.call(this);
@@ -139,7 +139,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return CheckBoxSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/HScrollBarSkin.exml'] = window.skins.HScrollBarSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/hscrollbarskin.exml'] = window.skins.HScrollBarSkin = (function (_super) {
 	__extends(HScrollBarSkin, _super);
 	function HScrollBarSkin() {
 		_super.call(this);
@@ -162,7 +162,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return HScrollBarSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/HSliderSkin.exml'] = window.skins.HSliderSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/hsliderskin.exml'] = window.skins.HSliderSkin = (function (_super) {
 	__extends(HSliderSkin, _super);
 	function HSliderSkin() {
 		_super.call(this);
@@ -192,7 +192,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return HSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/ItemRendererSkin.exml'] = window.skins.ItemRendererSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/Itemrendererskin.exml'] = window.skins.ItemRendererSkin = (function (_super) {
 	__extends(ItemRendererSkin, _super);
 	function ItemRendererSkin() {
 		_super.call(this);
@@ -245,7 +245,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/PanelSkin.exml'] = window.skins.PanelSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/panelskin.exml'] = window.skins.PanelSkin = (function (_super) {
 	__extends(PanelSkin, _super);
 	function PanelSkin() {
 		_super.call(this);
@@ -307,7 +307,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return PanelSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/ProgressBarSkin.exml'] = window.skins.ProgressBarSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/progressbarskin.exml'] = window.skins.ProgressBarSkin = (function (_super) {
 	__extends(ProgressBarSkin, _super);
 	function ProgressBarSkin() {
 		_super.call(this);
@@ -349,7 +349,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ProgressBarSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/ProgressBarSkinCustom1.exml'] = window.skins.ProgressBarSkinCustom1 = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/progressbarskincustom1.exml'] = window.skins.ProgressBarSkinCustom1 = (function (_super) {
 	__extends(ProgressBarSkinCustom1, _super);
 	function ProgressBarSkinCustom1() {
 		_super.call(this);
@@ -391,7 +391,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ProgressBarSkinCustom1;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/RadioButtonSkin.exml'] = window.skins.RadioButtonSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/radiobuttonskin.exml'] = window.skins.RadioButtonSkin = (function (_super) {
 	__extends(RadioButtonSkin, _super);
 	function RadioButtonSkin() {
 		_super.call(this);
@@ -463,7 +463,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return RadioButtonSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/ScrollerSkin.exml'] = window.skins.ScrollerSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/scrollerskin.exml'] = window.skins.ScrollerSkin = (function (_super) {
 	__extends(ScrollerSkin, _super);
 	function ScrollerSkin() {
 		_super.call(this);
@@ -490,7 +490,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ScrollerSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/TextInputSkin.exml'] = window.skins.TextInputSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/textInputskin.exml'] = window.skins.TextInputSkin = (function (_super) {
 	__extends(TextInputSkin, _super);
 	function TextInputSkin() {
 		_super.call(this);
@@ -565,7 +565,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return TextInputSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/ToggleSwitchSkin.exml'] = window.skins.ToggleSwitchSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/toggleswitchskin.exml'] = window.skins.ToggleSwitchSkin = (function (_super) {
 	__extends(ToggleSwitchSkin, _super);
 	function ToggleSwitchSkin() {
 		_super.call(this);
@@ -621,7 +621,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ToggleSwitchSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/VScrollBarSkin.exml'] = window.skins.VScrollBarSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/vscrollbarskin.exml'] = window.skins.VScrollBarSkin = (function (_super) {
 	__extends(VScrollBarSkin, _super);
 	function VScrollBarSkin() {
 		_super.call(this);
@@ -644,7 +644,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return VScrollBarSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/VSliderSkin.exml'] = window.skins.VSliderSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/vsliderskin.exml'] = window.skins.VSliderSkin = (function (_super) {
 	__extends(VSliderSkin, _super);
 	function VSliderSkin() {
 		_super.call(this);
@@ -674,7 +674,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return VSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/ui/FriendUI.exml'] = window.MainUISkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/friendui.exml'] = window.MainUISkin = (function (_super) {
 	__extends(MainUISkin, _super);
 	var MainUISkin$Skin1 = 	(function (_super) {
 		__extends(MainUISkin$Skin1, _super);
@@ -1005,7 +1005,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return MainUISkin;
-})(eui.Skin);generateEUI.paths['resource/ui/GameAttackLifeUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gameattacklifeui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin5 = 	(function (_super) {
 		__extends(GameUI$Skin5, _super);
@@ -1310,7 +1310,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameBattleMatchUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamebattlematchui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin9 = 	(function (_super) {
 		__extends(GameUI$Skin9, _super);
@@ -1777,7 +1777,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameBattleShowUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamebattleshowui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin10 = 	(function (_super) {
 		__extends(GameUI$Skin10, _super);
@@ -2294,7 +2294,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameBuyZombieUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamebuyzombieui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin11 = 	(function (_super) {
 		__extends(GameUI$Skin11, _super);
@@ -2590,7 +2590,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameChangeNameUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamechangenameui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin12 = 	(function (_super) {
 		__extends(GameUI$Skin12, _super);
@@ -2768,7 +2768,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameGetTokenUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamegettokenui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin14 = 	(function (_super) {
 		__extends(GameUI$Skin14, _super);
@@ -3010,7 +3010,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameGetZombieUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamegetzombieui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin16 = 	(function (_super) {
 		__extends(GameUI$Skin16, _super);
@@ -3127,7 +3127,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameMyZombieUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamemyzombieui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin17 = 	(function (_super) {
 		__extends(GameUI$Skin17, _super);
@@ -4306,7 +4306,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GamePopInfoUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamepopInfoui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin24 = 	(function (_super) {
 		__extends(GameUI$Skin24, _super);
@@ -4411,7 +4411,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameSellPopUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamesellpopui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin25 = 	(function (_super) {
 		__extends(GameUI$Skin25, _super);
@@ -4591,7 +4591,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameSpeedTrainUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamespeedtrainui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin27 = 	(function (_super) {
 		__extends(GameUI$Skin27, _super);
@@ -4899,7 +4899,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gameui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin31 = 	(function (_super) {
 		__extends(GameUI$Skin31, _super);
@@ -5143,7 +5143,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/GameZombiePitUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/gamezombiepitui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	function GameUI() {
 		_super.call(this);
@@ -5535,7 +5535,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/HomePageUI.exml'] = window.MainUISkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/homepageui.exml'] = window.MainUISkin = (function (_super) {
 	__extends(MainUISkin, _super);
 	var MainUISkin$Skin35 = 	(function (_super) {
 		__extends(MainUISkin$Skin35, _super);
@@ -5704,7 +5704,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return MainUISkin;
-})(eui.Skin);generateEUI.paths['resource/ui/MainUI.exml'] = window.MainUISkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/mainui.exml'] = window.MainUISkin = (function (_super) {
 	__extends(MainUISkin, _super);
 	var MainUISkin$Skin36 = 	(function (_super) {
 		__extends(MainUISkin$Skin36, _super);
@@ -6155,7 +6155,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return MainUISkin;
-})(eui.Skin);generateEUI.paths['resource/ui/MarketUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/marketui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin42 = 	(function (_super) {
 		__extends(GameUI$Skin42, _super);
@@ -9659,7 +9659,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/PageTurnUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/pageturnui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	function GameUI() {
 		_super.call(this);
@@ -10010,7 +10010,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return GameUI;
-})(eui.Skin);generateEUI.paths['resource/ui/ZombieFigureUI.exml'] = window.skins.GameUI = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/ui/zombiefigureui.exml'] = window.skins.GameUI = (function (_super) {
 	__extends(GameUI, _super);
 	var GameUI$Skin50 = 	(function (_super) {
 		__extends(GameUI$Skin50, _super);
