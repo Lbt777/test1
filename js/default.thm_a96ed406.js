@@ -1,5 +1,5 @@
-window.skins=window.skins||{};
-                var __extends = this && this.__extends|| function (d, b) {
+window.skins={};
+                function __extends(d, b) {
                     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
                         function __() {
                             this.constructor = d;
@@ -7,8 +7,8 @@ window.skins=window.skins||{};
                     __.prototype = b.prototype;
                     d.prototype = new __();
                 };
-                window.generateEUI = window.generateEUI||{};
-                generateEUI.paths = generateEUI.paths||{};
+                window.generateEUI = {};
+                generateEUI.paths = {};
                 generateEUI.styles = undefined;
                 generateEUI.skins = {"eui.Button":"resource/eui_skins/buttonskin.exml","eui.CheckBox":"resource/eui_skins/checkboxskin.exml","eui.HScrollBar":"resource/eui_skins/hscrollbarskin.exml","eui.HSlider":"resource/eui_skins/hsliderskin.exml","eui.Panel":"resource/eui_skins/panelskin.exml","eui.TextInput":"resource/eui_skins/textinputskin.exml","eui.ProgressBar":"resource/eui_skins/progressbarskin.exml","eui.RadioButton":"resource/eui_skins/radiobuttonskin.exml","eui.Scroller":"resource/eui_skins/scrollerskin.exml","eui.ToggleSwitch":"resource/eui_skins/toggleswitchskin.exml","eui.VScrollBar":"resource/eui_skins/vscrollbarskin.exml","eui.VSlider":"resource/eui_skins/vsliderskin.exml","eui.ItemRenderer":"resource/eui_skins/itemrendererskin.exml","MainUI":"resource/ui/mainui.exml","test":"resource/ui/test.exml","test2":"resource/eui_skins/test2.exml"};generateEUI.paths['resource/eui_skins/buttonskin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
@@ -3461,7 +3461,7 @@ window.skins=window.skins||{};
 		t.width = 223;
 		t.x = 49;
 		t.y = 51;
-		t.elementsContent = [this._Image2_i(),this._Label1_i(),this._Label2_i()];
+		t.elementsContent = [this._Image2_i(),this._Label1_i(),this._Label2_i(),this._Label3_i()];
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -3487,6 +3487,16 @@ window.skins=window.skins||{};
 	_proto._Label2_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_state";
 		t.size = 14.4;
 		t.text = "出售中";
@@ -3502,7 +3512,7 @@ window.skins=window.skins||{};
 		t.width = 223;
 		t.x = 331;
 		t.y = 51;
-		t.elementsContent = [this._Image3_i(),this._Label3_i(),this._Label4_i()];
+		t.elementsContent = [this._Image3_i(),this._Label4_i(),this._Label5_i(),this._Label6_i()];
 		return t;
 	};
 	_proto._Image3_i = function () {
@@ -3515,7 +3525,7 @@ window.skins=window.skins||{};
 		t.y = 0;
 		return t;
 	};
-	_proto._Label3_i = function () {
+	_proto._Label4_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_nft";
@@ -3527,7 +3537,19 @@ window.skins=window.skins||{};
 		t.y = 93;
 		return t;
 	};
-	_proto._Label4_i = function () {
+	_proto._Label5_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label6_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_state";
@@ -3547,55 +3569,10 @@ window.skins=window.skins||{};
 		t.width = 223;
 		t.x = 610;
 		t.y = 51;
-		t.elementsContent = [this._Image4_i(),this._Label5_i(),this._Label6_i()];
+		t.elementsContent = [this._Image4_i(),this._Label7_i(),this._Label8_i(),this._Label9_i()];
 		return t;
 	};
 	_proto._Image4_i = function () {
-		var t = new eui.Image();
-		t.height = 400;
-		t.name = "image_bg";
-		t.source = "atlas_game_39";
-		t.width = 223;
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto._Label5_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_nft";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "#1000023";
-		t.x = 24;
-		t.y = 93;
-		return t;
-	};
-	_proto._Label6_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_state";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "出售中";
-		t.x = 154;
-		t.y = 363;
-		return t;
-	};
-	_proto.group_item4_i = function () {
-		var t = new eui.Group();
-		this.group_item4 = t;
-		t.height = 400;
-		t.name = "group_item4";
-		t.width = 223;
-		t.x = 889;
-		t.y = 51;
-		t.elementsContent = [this._Image5_i(),this._Label7_i(),this._Label8_i()];
-		return t;
-	};
-	_proto._Image5_i = function () {
 		var t = new eui.Image();
 		t.height = 400;
 		t.name = "image_bg";
@@ -3620,6 +3597,75 @@ window.skins=window.skins||{};
 	_proto._Label8_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label9_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_state";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "出售中";
+		t.x = 154;
+		t.y = 363;
+		return t;
+	};
+	_proto.group_item4_i = function () {
+		var t = new eui.Group();
+		this.group_item4 = t;
+		t.height = 400;
+		t.name = "group_item4";
+		t.width = 223;
+		t.x = 889;
+		t.y = 51;
+		t.elementsContent = [this._Image5_i(),this._Label10_i(),this._Label11_i(),this._Label12_i()];
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.height = 400;
+		t.name = "image_bg";
+		t.source = "atlas_game_39";
+		t.width = 223;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label10_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_nft";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "#1000023";
+		t.x = 24;
+		t.y = 93;
+		return t;
+	};
+	_proto._Label11_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label12_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_state";
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -3637,100 +3683,10 @@ window.skins=window.skins||{};
 		t.width = 223;
 		t.x = 1168;
 		t.y = 51;
-		t.elementsContent = [this._Image6_i(),this._Label9_i(),this._Label10_i()];
+		t.elementsContent = [this._Image6_i(),this._Label13_i(),this._Label14_i(),this._Label15_i()];
 		return t;
 	};
 	_proto._Image6_i = function () {
-		var t = new eui.Image();
-		t.height = 400;
-		t.name = "image_bg";
-		t.source = "atlas_game_39";
-		t.width = 223;
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto._Label9_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_nft";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "#1000023";
-		t.x = 24;
-		t.y = 93;
-		return t;
-	};
-	_proto._Label10_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_state";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "出售中";
-		t.x = 154;
-		t.y = 363;
-		return t;
-	};
-	_proto.group_item6_i = function () {
-		var t = new eui.Group();
-		this.group_item6 = t;
-		t.height = 400;
-		t.name = "group_item6";
-		t.width = 223;
-		t.x = 52;
-		t.y = 480;
-		t.elementsContent = [this._Image7_i(),this._Label11_i(),this._Label12_i()];
-		return t;
-	};
-	_proto._Image7_i = function () {
-		var t = new eui.Image();
-		t.height = 400;
-		t.name = "image_bg";
-		t.source = "atlas_game_39";
-		t.width = 223;
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto._Label11_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_nft";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "#1000023";
-		t.x = 24;
-		t.y = 93;
-		return t;
-	};
-	_proto._Label12_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_state";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "出售中";
-		t.x = 154;
-		t.y = 363;
-		return t;
-	};
-	_proto.group_item7_i = function () {
-		var t = new eui.Group();
-		this.group_item7 = t;
-		t.height = 400;
-		t.name = "group_item7";
-		t.width = 223;
-		t.x = 331;
-		t.y = 480;
-		t.elementsContent = [this._Image8_i(),this._Label13_i(),this._Label14_i()];
-		return t;
-	};
-	_proto._Image8_i = function () {
 		var t = new eui.Image();
 		t.height = 400;
 		t.name = "image_bg";
@@ -3755,51 +3711,18 @@ window.skins=window.skins||{};
 	_proto._Label14_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_state";
+		t.name = "label_name";
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.size = 14.4;
-		t.text = "出售中";
-		t.x = 154;
-		t.y = 363;
-		return t;
-	};
-	_proto.group_item8_i = function () {
-		var t = new eui.Group();
-		this.group_item8 = t;
-		t.height = 400;
-		t.name = "group_item8";
-		t.width = 223;
-		t.x = 610;
-		t.y = 480;
-		t.elementsContent = [this._Image9_i(),this._Label15_i(),this._Label16_i()];
-		return t;
-	};
-	_proto._Image9_i = function () {
-		var t = new eui.Image();
-		t.height = 400;
-		t.name = "image_bg";
-		t.source = "atlas_game_39";
-		t.width = 223;
-		t.x = 0;
-		t.y = 0;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
 		return t;
 	};
 	_proto._Label15_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
-		t.name = "label_nft";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 14.4;
-		t.text = "#1000023";
-		t.x = 24;
-		t.y = 93;
-		return t;
-	};
-	_proto._Label16_i = function () {
-		var t = new eui.Label();
-		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_state";
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -3809,18 +3732,18 @@ window.skins=window.skins||{};
 		t.y = 363;
 		return t;
 	};
-	_proto.group_item9_i = function () {
+	_proto.group_item6_i = function () {
 		var t = new eui.Group();
-		this.group_item9 = t;
+		this.group_item6 = t;
 		t.height = 400;
-		t.name = "group_item9";
+		t.name = "group_item6";
 		t.width = 223;
-		t.x = 889;
+		t.x = 52;
 		t.y = 480;
-		t.elementsContent = [this._Image10_i(),this._Label17_i(),this._Label18_i()];
+		t.elementsContent = [this._Image7_i(),this._Label16_i(),this._Label17_i(),this._Label18_i()];
 		return t;
 	};
-	_proto._Image10_i = function () {
+	_proto._Image7_i = function () {
 		var t = new eui.Image();
 		t.height = 400;
 		t.name = "image_bg";
@@ -3830,7 +3753,7 @@ window.skins=window.skins||{};
 		t.y = 0;
 		return t;
 	};
-	_proto._Label17_i = function () {
+	_proto._Label16_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_nft";
@@ -3840,6 +3763,18 @@ window.skins=window.skins||{};
 		t.text = "#1000023";
 		t.x = 24;
 		t.y = 93;
+		return t;
+	};
+	_proto._Label17_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
 		return t;
 	};
 	_proto._Label18_i = function () {
@@ -3854,18 +3789,18 @@ window.skins=window.skins||{};
 		t.y = 363;
 		return t;
 	};
-	_proto.group_item10_i = function () {
+	_proto.group_item7_i = function () {
 		var t = new eui.Group();
-		this.group_item10 = t;
+		this.group_item7 = t;
 		t.height = 400;
-		t.name = "group_item10";
+		t.name = "group_item7";
 		t.width = 223;
-		t.x = 1168;
+		t.x = 331;
 		t.y = 480;
-		t.elementsContent = [this._Image11_i(),this._Label19_i(),this._Label20_i()];
+		t.elementsContent = [this._Image8_i(),this._Label19_i(),this._Label20_i(),this._Label21_i()];
 		return t;
 	};
-	_proto._Image11_i = function () {
+	_proto._Image8_i = function () {
 		var t = new eui.Image();
 		t.height = 400;
 		t.name = "image_bg";
@@ -3888,6 +3823,189 @@ window.skins=window.skins||{};
 		return t;
 	};
 	_proto._Label20_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label21_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_state";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "出售中";
+		t.x = 154;
+		t.y = 363;
+		return t;
+	};
+	_proto.group_item8_i = function () {
+		var t = new eui.Group();
+		this.group_item8 = t;
+		t.height = 400;
+		t.name = "group_item8";
+		t.width = 223;
+		t.x = 610;
+		t.y = 480;
+		t.elementsContent = [this._Image9_i(),this._Label22_i(),this._Label23_i(),this._Label24_i()];
+		return t;
+	};
+	_proto._Image9_i = function () {
+		var t = new eui.Image();
+		t.height = 400;
+		t.name = "image_bg";
+		t.source = "atlas_game_39";
+		t.width = 223;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label22_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_nft";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "#1000023";
+		t.x = 24;
+		t.y = 93;
+		return t;
+	};
+	_proto._Label23_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label24_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_state";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "出售中";
+		t.x = 154;
+		t.y = 363;
+		return t;
+	};
+	_proto.group_item9_i = function () {
+		var t = new eui.Group();
+		this.group_item9 = t;
+		t.height = 400;
+		t.name = "group_item9";
+		t.width = 223;
+		t.x = 889;
+		t.y = 480;
+		t.elementsContent = [this._Image10_i(),this._Label25_i(),this._Label26_i(),this._Label27_i()];
+		return t;
+	};
+	_proto._Image10_i = function () {
+		var t = new eui.Image();
+		t.height = 400;
+		t.name = "image_bg";
+		t.source = "atlas_game_39";
+		t.width = 223;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label25_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_nft";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "#1000023";
+		t.x = 24;
+		t.y = 93;
+		return t;
+	};
+	_proto._Label26_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label27_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_state";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "出售中";
+		t.x = 154;
+		t.y = 363;
+		return t;
+	};
+	_proto.group_item10_i = function () {
+		var t = new eui.Group();
+		this.group_item10 = t;
+		t.height = 400;
+		t.name = "group_item10";
+		t.width = 223;
+		t.x = 1168;
+		t.y = 480;
+		t.elementsContent = [this._Image11_i(),this._Label28_i(),this._Label29_i(),this._Label30_i()];
+		return t;
+	};
+	_proto._Image11_i = function () {
+		var t = new eui.Image();
+		t.height = 400;
+		t.name = "image_bg";
+		t.source = "atlas_game_39";
+		t.width = 223;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label28_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_nft";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "#1000023";
+		t.x = 24;
+		t.y = 93;
+		return t;
+	};
+	_proto._Label29_i = function () {
+		var t = new eui.Label();
+		t.fontFamily = "Microsoft YaHei";
+		t.name = "label_name";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 14.4;
+		t.text = "昵称";
+		t.x = 24;
+		t.y = 114;
+		return t;
+	};
+	_proto._Label30_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.name = "label_state";
@@ -3915,7 +4033,7 @@ window.skins=window.skins||{};
 		t.width = 1438;
 		t.x = 241;
 		t.y = 723;
-		t.elementsContent = [this.image_back_i(),this.label_back_i(),this.image_zombie_bg_i(),this._Image12_i(),this.label_name_i(),this.btn_changeName_i(),this._Label21_i(),this.label_owner_name_i(),this._Label22_i(),this.label_battle_num_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this.label_atkvalue_i(),this._Label23_i(),this.label_lifevalue_i(),this._Label24_i(),this.label_speedvalue_i(),this._Label25_i(),this.label_lackyvalue_i(),this._Label26_i(),this.label_growthvalue_i(),this._Label27_i(),this._Label28_i(),this.label_pit_num_i(),this.btn_battle_i(),this.btn_atklife_i(),this.btn_speedtrain_i(),this.btn_pit_i(),this.btn_sell_i(),this.btn_awake_i(),this.label_atktime_i(),this._Label29_i(),this._Label30_i(),this._Label31_i(),this._Label32_i()];
+		t.elementsContent = [this.image_back_i(),this.label_back_i(),this.image_zombie_bg_i(),this._Image12_i(),this.label_name_i(),this.btn_changeName_i(),this._Label31_i(),this.label_owner_name_i(),this._Label32_i(),this.label_battle_num_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this.label_atkvalue_i(),this._Label33_i(),this.label_lifevalue_i(),this._Label34_i(),this.label_speedvalue_i(),this._Label35_i(),this.label_lackyvalue_i(),this._Label36_i(),this.label_growthvalue_i(),this._Label37_i(),this._Label38_i(),this.label_pit_num_i(),this.btn_battle_i(),this.btn_atklife_i(),this.btn_speedtrain_i(),this.btn_pit_i(),this.btn_sell_i(),this.btn_awake_i(),this.label_atktime_i(),this._Label39_i(),this._Label40_i(),this._Label41_i(),this._Label42_i()];
 		return t;
 	};
 	_proto.image_back_i = function () {
@@ -3979,7 +4097,7 @@ window.skins=window.skins||{};
 		t.skinName = GameUI$Skin17;
 		return t;
 	};
-	_proto._Label21_i = function () {
+	_proto._Label31_i = function () {
 		var t = new eui.Label();
 		t.bold = false;
 		t.border = false;
@@ -4006,7 +4124,7 @@ window.skins=window.skins||{};
 		t.y = 261;
 		return t;
 	};
-	_proto._Label22_i = function () {
+	_proto._Label32_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4084,7 +4202,7 @@ window.skins=window.skins||{};
 		t.y = 432;
 		return t;
 	};
-	_proto._Label23_i = function () {
+	_proto._Label33_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4105,7 +4223,7 @@ window.skins=window.skins||{};
 		t.y = 432;
 		return t;
 	};
-	_proto._Label24_i = function () {
+	_proto._Label34_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4126,7 +4244,7 @@ window.skins=window.skins||{};
 		t.y = 432;
 		return t;
 	};
-	_proto._Label25_i = function () {
+	_proto._Label35_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4147,7 +4265,7 @@ window.skins=window.skins||{};
 		t.y = 432;
 		return t;
 	};
-	_proto._Label26_i = function () {
+	_proto._Label36_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4168,7 +4286,7 @@ window.skins=window.skins||{};
 		t.y = 432;
 		return t;
 	};
-	_proto._Label27_i = function () {
+	_proto._Label37_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4179,7 +4297,7 @@ window.skins=window.skins||{};
 		t.y = 471;
 		return t;
 	};
-	_proto._Label28_i = function () {
+	_proto._Label38_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4261,7 +4379,7 @@ window.skins=window.skins||{};
 		t.y = 741;
 		return t;
 	};
-	_proto._Label29_i = function () {
+	_proto._Label39_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4272,7 +4390,7 @@ window.skins=window.skins||{};
 		t.y = 533;
 		return t;
 	};
-	_proto._Label30_i = function () {
+	_proto._Label40_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 30;
@@ -4283,7 +4401,7 @@ window.skins=window.skins||{};
 		t.y = 527;
 		return t;
 	};
-	_proto._Label31_i = function () {
+	_proto._Label41_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 20;
@@ -4294,7 +4412,7 @@ window.skins=window.skins||{};
 		t.y = 533;
 		return t;
 	};
-	_proto._Label32_i = function () {
+	_proto._Label42_i = function () {
 		var t = new eui.Label();
 		t.fontFamily = "Microsoft YaHei";
 		t.size = 30;
@@ -5581,14 +5699,42 @@ window.skins=window.skins||{};
 
 	function MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["btn_start_game0"];
+		this.skinParts = ["scrollerviewContent","scrollerview","btn_start_game0"];
 		
 		this.height = 3760;
 		this.width = 1920;
-		this.elementsContent = [this._Group5_i()];
+		this.elementsContent = [this.scrollerview_i(),this._Group5_i()];
 	}
 	var _proto = MainUISkin.prototype;
 
+	_proto.scrollerview_i = function () {
+		var t = new eui.Scroller();
+		this.scrollerview = t;
+		t.height = 1080;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = true;
+		t.visible = true;
+		t.width = 1920;
+		t.x = 0;
+		t.y = 0;
+		t.viewport = this.scrollerviewContent_i();
+		return t;
+	};
+	_proto.scrollerviewContent_i = function () {
+		var t = new eui.Group();
+		this.scrollerviewContent = t;
+		t.height = 3760;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 0;
+		t.visible = true;
+		t.width = 1920;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
 	_proto._Group5_i = function () {
 		var t = new eui.Group();
 		t.height = 3760;
