@@ -6118,18 +6118,18 @@ window.skins=window.skins||{};
 
 	function MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["scrollerviewContent","scrollerview","btn_start_game1","startGame","label_homepage","label_market","label_game","label_friend","btn_money_link"];
+		this.skinParts = ["btn_start_game1","startGame","scrollerviewContent","scrollerview","label_homepage","label_market","label_game","label_friend","btn_money_link"];
 		
-		this.height = 3748.498;
+		this.height = 3760;
 		this.width = 1920;
-		this.elementsContent = [this.scrollerview_i(),this.startGame_i(),this._Group5_i()];
+		this.elementsContent = [this.scrollerview_i(),this._Group5_i()];
 	}
 	var _proto = MainUISkin.prototype;
 
 	_proto.scrollerview_i = function () {
 		var t = new eui.Scroller();
 		this.scrollerview = t;
-		t.height = 3760.162;
+		t.height = 940;
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -6144,7 +6144,7 @@ window.skins=window.skins||{};
 	_proto.scrollerviewContent_i = function () {
 		var t = new eui.Group();
 		this.scrollerviewContent = t;
-		t.height = 3760;
+		t.height = 926.656;
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.top = 0;
@@ -6152,6 +6152,7 @@ window.skins=window.skins||{};
 		t.width = 1920;
 		t.x = 0;
 		t.y = 0;
+		t.elementsContent = [this.startGame_i()];
 		return t;
 	};
 	_proto.startGame_i = function () {
@@ -6180,9 +6181,8 @@ window.skins=window.skins||{};
 	};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.bottom = 0;
 		t.fillMode = "clip";
-		t.height = 1020;
+		t.height = 940;
 		t.left = 0;
 		t.right = 0;
 		t.scaleX = 1;
@@ -6192,7 +6192,6 @@ window.skins=window.skins||{};
 		t.visible = true;
 		t.width = 1920;
 		t.x = 0;
-		t.y = 0;
 		return t;
 	};
 	_proto.btn_start_game1_i = function () {
