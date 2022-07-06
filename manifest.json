@@ -3,14 +3,13 @@
 		"js/egret.min_3a39dfa6.js",
 		"js/egret.web.min_d2f51c7d.js",
 		"js/eui.min_7b291ad4.js",
-		"js/game.min_ce13e75b.js",
 		"js/assetsmanager.min_b2ca4c97.js",
+		"js/game.min_ce13e75b.js",
 		"js/tween.min_6c5a88f9.js",
-		"js/promise.min_83a6a5d.js",
-		"js/mouse.min_cbfd4dc0.js"
+		"js/promise.min_83a6a5d.js"
 	],
 	"game": [
-		"js/default.thm_c99edbcf.js",
-		"js/main.min_bb41d5be.js"
+		"js/default.thm_1ae676b8.js",
+		"js/main.min_cf03e38f.js"
 	]
 }
