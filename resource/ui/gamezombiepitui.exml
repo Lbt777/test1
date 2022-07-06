@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GameUI"
+	 width="1920"
+	height="2312" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="1438" height="1009" x="241" y="719" visible="true" blendMode="normal" source="atlas_game_45"/>
+	<e:Group width="1438" height="1009" x="241" y="719" id="group_my_Zombie" visible="true">
+		<e:Group id="group_zombie" width="1438" height="1009" x="0" y="0" visible="true">
+			<e:Group id="group_item1" width="223" height="400" x="49" y="51" name="group_item1" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="331" y="51" id="group_item2" name="group_item2" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="23" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="610" y="51" id="group_item3" name="group_item3" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="889" y="51" id="group_item4" name="group_item4" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="1168" y="51" id="group_item5" name="group_item5" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="52" y="480" id="group_item6" name="group_item6" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="331" y="480" id="group_item7" name="group_item7" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="610" y="480" id="group_item8" name="group_item8" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="889" y="480" id="group_item9" name="group_item9" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Group width="223" height="400" x="1168" y="480" id="group_item10" name="group_item10" visible="false">
+				<e:Image width="223" height="400" x="0" y="0" name="image_bg" source="atlas_game_39"/>
+				<e:Label text="#1000023" x="24" y="93" fontFamily="Microsoft YaHei" size="14.4" name="label_nft" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:Label id="label_nohave_info" text="--  无数据显示 --" x="618" y="342"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GameUI"
+	 width="3000"
+	height="3000" xmlns:e="http://ns.egret.com/eui">
+	<e:Rect width="3000" height="3000" x="0" y="10" fillColor="0x000000" strokeColor="0x0D8CC180" alpha="0.5" visible="true"/>
+	<e:Group width="1210" height="471" x="379.507" y="235.655" visible="true">
+		<e:Image width="1210" height="471" x="0" y="0" source="atlas_game_38"/>
+		<e:Button id="btn_close" x="1176" y="93" width="53">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="atlas_game_33"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="btn_train_1" x="187" y="317">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="atlas_game_35"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="label_train1_count" text="已培育次数：20" x="221" y="264" textColor="0xFFD76C" size="18" verticalAlign="middle" textAlign="center"/>
+		<e:Label id="label_train1_prop" x="205" y="228" textColor="0xFFD76C" size="18" text="攻击+5     血量+10" verticalAlign="middle" textAlign="center"/>
+		<e:Button id="btn_train_10" x="528" y="317">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="atlas_game_36"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label text="已培育次数：20" x="565" y="264" size="18" id="label_train10_count" textColor="0x45A6E3" verticalAlign="middle" textAlign="center"/>
+		<e:Label x="536" y="228" size="18" text="攻击+5      血量+10" id="label_train10_prop" textColor="0x45A6E3" verticalAlign="middle" textAlign="center"/>
+		<e:Button id="btn_train_100" x="862" y="317">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="atlas_game_37"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label text="已培育次数：20" x="899" y="264" size="18" id="label_train100_count" textColor="0x79E0D6"/>
+		<e:Label x="877" y="228" size="18" text="攻击+5     血量+10" id="label_train100_prop" textColor="0x79E0D6"/>
+	</e:Group>
+</e:Skin>
