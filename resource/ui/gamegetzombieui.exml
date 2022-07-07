@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GameUI"
+	 width="1920"
+	height="2312" xmlns:e="http://ns.egret.com/eui">
+	<e:Group id="group_get_Zombie" width="1220" height="467" y="804" visible="true" horizontalCenter="0" x="350">
+		<e:Image width="1220" height="467" x="0" y="0" source="atlas_game_15"/>
+		<e:Button id="btn_get_zombie" x="795" y="227">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="atlas_game_14"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:Button>
+		<e:Image width="360" height="60" x="709" y="123" source="atlas_game_16"/>
+		<e:EditableText id="editabletext_get_name" width="360" height="60" x="709" y="123" fontFamily="Microsoft YaHei" size="17" textAlign="center" verticalAlign="middle" prompt="给僵尸起个好名字" wordWrap="true"/>
+		<e:Label id="label_info" text="* 购买必须要给您的丧尸起个好名字哦~" x="711" y="196" fontFamily="Microsoft YaHei" textColor="0xDE9D2C" size="16"/>
+	</e:Group>
+</e:Skin>

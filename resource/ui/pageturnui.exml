@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.GameUI"
+	 width="700"
+	height="80" xmlns:e="http://ns.egret.com/eui">
+	<e:Group id="group_zombie" width="420" height="80" x="0" y="0" visible="true">
+		<e:Image id="image_leftpage" width="30" height="30" x="40" y="23" source="atlas_game_19"/>
+		<e:Group id="group_page1" width="30" height="30" x="80" y="23" visible="true">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" name="image_sele" source="atlas_game_6" visible="true"/>
+		<e:Label text="1" y="9" size="14" fontFamily="Microsoft YaHei" bold="true" name="label" height="15" width="15" horizontalCenter="0" textAlign="center" verticalAlign="middle"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="120" y="23" id="group_page2">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" y="0" source="atlas_game_6" name="image_sele" visible="true" horizontalCenter="0"/>
+		<e:Label text="2" y="9" size="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" name="label" width="15" height="15" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="160" y="23" id="group_page3">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_6" name="image_sele" visible="true"/>
+		<e:Label text="2" y="9" size="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" name="label" height="15" horizontalCenter="0" width="15"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="200" y="23" id="group_page4">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_6" name="image_sele" visible="true"/>
+		<e:Label text="2" y="9" size="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" name="label" width="15" height="15" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="240" y="23" id="group_page5">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_6" name="image_sele" visible="true"/>
+		<e:Label text="2" y="9" size="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" name="label" height="15" width="15" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="280" y="23" id="group_page6">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_6" name="image_sele" visible="true"/>
+		<e:Label text="1" y="9" size="14" fontFamily="Microsoft YaHei" textAlign="center" bold="true" name="label" width="15" height="15" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group width="30" height="30" x="320" y="23" id="group_page7">
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_17" name="image"/>
+		<e:Image width="30" height="30" x="0" y="0" source="atlas_game_6" name="image_sele" visible="true"/>
+		<e:Label text="2" y="9" size="14" fontFamily="Microsoft YaHei" verticalAlign="middle" textAlign="center" bold="true" name="label" width="15" height="15" horizontalCenter="0"/>
+		</e:Group>
+		<e:Image id="image_rightpage" width="30" height="30" y="23" source="atlas_game_18" x="360"/>
+	</e:Group>
+</e:Skin>
