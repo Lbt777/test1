@@ -1,1 +1,1 @@
-const s="/assets/D_bg.9b30f855.png";export{s as _};
+const r=""+new URL("D_bg.9b30f855.png",import.meta.url).href;export{r as _};
