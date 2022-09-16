@@ -1,1 +1,1 @@
-const s="/assets/guquanbi.a320137a.png";export{s as _};
+const a=""+new URL("guquanbi.a320137a.png",import.meta.url).href;export{a as _};
