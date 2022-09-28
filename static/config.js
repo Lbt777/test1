@@ -10,7 +10,7 @@
 
 export default {
 	estimateStartTime: "10:00", // 预约开始
-	estimateEndTime: "", // 预约结束
+	estimateEndTime: "12:00", // 预约结束
 	estimateReadonly: false, // 预约只读不可修改
 	jobStartTime: "", // 营业开始
 	jobEndTime: "", // 营业结束
