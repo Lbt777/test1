@@ -99,8 +99,8 @@ if (locationHref.indexOf("test3-app") != -1) {
   baseUrl = "http://zhihe-api.wkyteam.com"
 } else {
   // 本地测试 
-  baseUrl = "http://192.168.3.110:8083"
-  // baseUrl = "https://test-wkzh-api.wkyclouds.com"
+  // baseUrl = "http://192.168.3.110:8083"
+  baseUrl = "https://test-wkzh-api.wkyclouds.com"
 }
 
 const statusColor = {
