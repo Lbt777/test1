@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>提币地址</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .coins {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+      }
+      .coins > button {
+        background-color: #dadada;
+        padding: 0.3rem 1rem;
+        border-radius: 0.2rem;
+        font-size: 0.9rem;
+        margin: 1rem 0.5rem;
+      }
+      .coins > button:nth-child(2) {
+        background-color: #5c92ff;
+        color: #aaa;
+      }
+      .payment .vericode {
+        display: flex;
+        flex-direction: initial !important;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        margin-bottom: 0;
+        padding: 0.8rem;
+        border-bottom: 1px solid #292e41;
+      }
+      .payment .vericode button {
+        width: 30%;
+        padding-left: 0.8rem;
+        border-left: 1px solid #292e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <button onclick="window.history.back()">
+            <img src="images/back.png" />
+        </button>
+        <span>提币地址</span>
+        <div></div>
+    </div>
+    <div class="inputs">
+      <p>提币地址</p>
+      <textarea id="addressValue" placeholder="请输入您的提币地址" style="font-size: 1rem; height: 3rem;
+      line-height: 1.5rem;border-radius: 0.5rem;margin-top: 1rem;
+      padding: 0.5rem;" rows="1" ref="address" ></textarea>
+      <p style="padding:0.5rem 0;color: #ababab;font-size: 16px;">提示:提币会转到此地址</p>
+      <button class="btn" onclick="next()">确认</button>
+    </div>
+
+    <div class="global-shadow">
+      <div class="payment">
+        <div>
+            <span>提币地址绑定</span>
+            <button style="width: 15%" onclick="popup(0)">
+                <img src="images/close.png" width="40%" />
+            </button>
+        </div>
+        <div>
+            <div class="one" style="display: none;">
+                <span>提币地址：</span>
+                <span id="address" style="width:10rem; overflow: hidden;text-overflow: ellipsis;
+                white-space: nowrap;text-align: right;"></span>
+            </div>
+        </div>
+        <div class="two">
+            <span>支付密码：</span>
+        </div>
+        <input type="password" placeholder="请输入支付密码" />
+        <div class="two">
+          <span id="title2">验证码：</span>
+        </div>
+        <div class="vericode" style="border-bottom: 1px solid #e4e4e4;">
+          <input type="number" placeholder="请输入短信验证码" />
+          <button onclick="sendSms()">发送短信</button>
+        </div>
+        <button onclick="withdrawlConfirm()" class="btn">确认</button>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/address.js"></script>
+</html>

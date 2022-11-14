@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>产品详情</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/commodity.css" />
+</head>
+
+<body>
+  <div class="header">
+    <button onclick="window.history.back()">
+      <img src="images/back.png" />
+    </button>
+    <span>产品详情</span>
+    <div></div>
+  </div>
+  <div class="main" style="overflow-x: hidden;overflow-y: auto;">
+    <div>
+      <img src="images/mine.png" />
+      <h4 id="name"></h4>
+    </div>
+    <div>
+      <span><span id="price"></span>
+        <span class="type4">
+          ≈<span style="font-size: inherit;
+                color: #202020;" id="price1"></span> USDT
+        </span>
+      </span>
+      <div>
+        <button onclick="changeAmount(1)">
+          <img src="images/add.png" />
+        </button>
+        <input type="number" value="1" id="amount" onchange="changeAmount()" />
+        <button onclick="changeAmount(-1)">
+          <img src="images/minus.png" />
+        </button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <img src="images/pur1.png" />
+          <span id="settlementPeriod"></span>
+        </div>
+        <!-- <span>封装周期</span> -->
+        <span>发货周期</span>
+      </div>
+      <div>
+        <div>
+          <img src="images/pur2.png" />
+          <span id="contractPeriod"></span>
+        </div>
+        <span>服务周期</span>
+      </div>
+      <div>
+        <div>
+          <img src="images/pur3.png" />
+          <span id="serviceFee"></span>
+        </div>
+        <span>技术服务费</span>
+      </div>
+    </div>
+    <div class="schedule">
+      <table>
+        <tbody>
+          <tr>
+            <th>购买激活日</th>
+            <th>产币日</th>
+            <th>截止日</th>
+          </tr>
+          <tr id="datas">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <div>
+                <div></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="detialContent" style="padding:20px 20px 30px;">
+
+    </div>
+    <div>
+      <span>总额：<span id="total"></span></span>
+      <button id="orderBtn" onclick="popup()">下单</button>
+    </div>
+  </div>
+  <div class="global-shadow">
+    <div class="payment">
+      <div>
+        <span>购买算力</span>
+        <button style="width: 15%" onclick="popup(0)">
+          <img src="images/close.png" width="40%" />
+        </button>
+      </div>
+      <div>
+        <div class="one">
+          <span>数量：</span>
+          <span id="amount2">1</span>
+        </div>
+        <div class="one">
+          <span>支付：</span>
+          <span id="total2"></span>
+        </div>
+      </div>
+      <div>
+        <span>支付方式：</span>
+      </div>
+      <div>
+        <label class="one2">
+          <span>银行转账</span>
+          <input id="card" type="radio" name="paytyep" value="银行转账" checked />
+        </label>
+        <label class="one2" id="usdtPay" style="display: none;">
+          <span>USDT</span>
+          <input id="usdt" type="radio" name="paytyep" value="USDT" />
+        </label>
+        <label class="one2" style="display: flex;">
+          <span>微信</span>
+          <input id="wx" type="radio" name="paytyep" value="wx" />
+        </label>
+        <label class="one2" style="display: flex;">
+          <span>支付宝</span>
+          <input id="zfb" type="radio" name="paytyep" value="zfb" />
+        </label>
+      </div>
+      <div class="two" style="display: none;">
+        <span>支付密码：</span>
+      </div>
+      <input class="twochild" style="display: none;" type="password" placeholder="请输入支付密码" />
+      <button onclick="purchaseConfirm()" class="btn">确认</button>
+    </div>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/commodity.js"></script>
+
+</html>

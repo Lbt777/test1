@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>我的审核</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <style>
+      .item {
+        display: block;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        background-color: #fff;
+        border-radius: 0.2rem;
+      }
+      .item > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item > div:first-child {
+        margin-bottom: 0.5rem;
+      }
+      .item > div:nth-child(2) > span:nth-child(2) {
+        color: #ccc;
+      }
+      .statusBar {
+        display: flex;
+        justify-content: space-around;
+      }
+      .statusBar > button {
+        width: 25%;
+        font-size: 0.8rem;
+      }
+      .statusBar > button:not(:first-child) {
+        border-left: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>我的审核</span>
+      <div></div>
+    </div>
+    <div class="statusBar">
+      <button onclick="switchStatus(0)">所有</button>
+      <button onclick="switchStatus(1,2)">待确认</button>
+      <button onclick="switchStatus(2,4)">已确认</button>
+      <button onclick="switchStatus(3,3)">完成</button>
+    </div>
+    <div id="minirefresh" class="minirefresh-wrap">
+      <div class="minirefresh-scroll">
+        <dl class="data-list" id="listdata"></dl>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/minirefresh.js"></script>
+  <script src="dist/js/pagination.js"></script>
+  <script src="dist/js/missions.js"></script>
+</html>

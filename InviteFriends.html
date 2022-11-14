@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>招募令</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/minirefresh.css" />
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    .vueBox img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    body {
+      position: relative;
+      background: #2F5EE2;
+      overflow: auto;
+    }
+
+    .bg {
+      width: 100%;
+      position: absolute;
+      top: -48px;
+      z-index: 1;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .header {
+      position: relative;
+      z-index: 2;
+      background: transparent;
+    }
+
+    .tree {
+      height: 64px;
+      width: 66px;
+      position: absolute;
+      z-index: 10;
+      right: 0;
+    }
+
+    .tree1 {
+      top: 57%;
+    }
+
+    .tree2 {
+      top: 144%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 3;
+      top: 160px;
+      position: relative;
+    }
+
+    .qipao {
+      position: relative;
+      width: 95%;
+      margin: auto;
+      background: #0033A5;
+      border-radius: 4px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .qipao1 {
+      width: 0;
+      height: 0;
+      border-top: 16px solid #0033A5;
+      border-left: 16px dashed transparent;
+      border-right: 16px dashed transparent;
+      position: absolute;
+      right: 50px;
+      bottom: -16px;
+    }
+
+    .tips {
+      font-size: 14px;
+      text-indent: 24px;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 21px;
+    }
+
+    .suojin {
+      text-indent: 24px;
+    }
+
+    .mainText {
+      background: #FFFFFF;
+      box-shadow: 0px 2px 14px 0px rgba(20, 28, 135, 0.25);
+      border-radius: 7px;
+      width: 95%;
+      margin: auto;
+      margin-top: 30px;
+      padding: 40px 25px 40px 25px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    .line {
+      height: 7px;
+      width: 7px;
+      transform: rotateZ(45deg);
+      background: #1C55EB;
+      margin-right: 4px;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .item {
+      display: flex;
+      margin-bottom: 27px;
+    }
+
+    .tip {
+      font-size: 14px;
+      font-weight: 400;
+      color: #061339;
+    }
+
+    .bottoms {
+      margin-bottom: 0;
+    }
+
+    .form {
+      background: #fff;
+      width: 95%;
+      border-radius: 7px;
+      margin: auto;
+      margin-top: 15px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 72px;
+    }
+
+    .titles {
+      height: 50px;
+      background: linear-gradient(-90deg, rgba(230, 237, 255, 0) 0%, #E6EDFF 100%);
+      border-radius: 5px 5px 0px 0px;
+      font-size: 20px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: 800;
+      color: #2C59D9;
+      line-height: 50px;
+    }
+
+    .btns {
+      height: 54px;
+      background: linear-gradient(-2deg, #427ADF, #2C59DA);
+      border-radius: 2px;
+      font-size: 23px;
+      line-height: 54px;
+      text-align: center;
+      font-weight: bold;
+      color: #FFFFFF;
+      line-height: 54px;
+      width: 291px;
+      margin: auto;
+      margin-top: 18px;
+      margin-bottom: 32px;
+    }
+
+    .biaodan {
+      display: flex;
+      flex-direction: column;
+      padding: 0 32px;
+      margin-top: 17px;
+    }
+
+    .item1 {
+      display: flex;
+      align-items: center;
+      height: 38px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .item1:last-child {
+      margin-bottom: 0;
+    }
+
+    .lable {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333333;
+      line-height: 24px;
+    }
+
+    input::placeholder {
+      font-size: 13px;
+    }
+
+    input {
+      border-bottom: 1px solid #D8D7D7;
+      height: 100%;
+    }
+
+    #model {
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    span {
+      text-align: center;
+      text-indent: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button onclick="window.history.back()">
+      <img src="images/back.png" />
+    </button>
+    <span></span>
+    <div></div>
+  </div>
+  <div class="vueBox" v-cloak>
+    <div class="bg">
+      <img src="images/banner/bg.png" />
+    </div>
+    <div class="content">
+      <div class="qipao">
+        <div class="qipao1"></div>
+        <div class="tips">逆势思维，火热布局，filecoin当前处于历史低位，是建仓的绝佳时机。
+          过去一段时间，我们一直思考filecoin项目何去何从，作为web3的明星项目，与比特币，以太坊齐名的代表区块链3.0的项目，熊市布局生态，很多人着急忙慌的布局比特币。岂不知，fil当前才是最具潜力的。
+        </div>
+      </div>
+      <div class="mainText">
+        <div class="item">
+          <div class="line"></div>
+          <div class="tip">1、Filecoin的FVM生态落地，是远远优于BSC BSN TRC的生态链。她生来就解决了存储的痛点。实现了真正的去中心化应用。</div>
+        </div>
+        <div class="item">
+          <div class="line"></div>
+          <div class="tip">2、检索挖矿。存储挖矿时代布局早的人挣得盆满钵满，检索挖矿时代，也存在一波行情。检索挖矿是根据存储挖矿进行配比的。</div>
+        </div>
+        <div class="item">
+          <div class="line"></div>
+          <div class="tip">3、挖矿利润，当前熊市年回报还能在50%左右，等到大牛，翻倍远远高于比特币矿机。</div>
+        </div>
+        <div class="item">
+          <div class="line"></div>
+          <div class="tip">4、技术团队是当前几个公链最大的。最有市场的，BTC翻倍3000万倍。ETH亦然，排名第三的Fil，拿的住就会什么都有，只有参与了挖矿才真正能拿的住币。</div>
+        </div>
+        <div class="item">
+          <div class="tip suojin">当前，悟空云持续看好filecoin这个赛道，并且也进行了深更，在算法领域，对于P2
+            C2部分的优化，全球领先。并且在2020年就与西安邮电合作，研究家庭级挖矿矿机。主要是将filecoin网络的冷数据先缓存在我们家庭级盒子里，变成热数据供人检索。就是所谓的检索矿工。当前我们已经有的P2PCDN
+            的算法专利，以及家庭级检索矿机的矿机研发专利。在这条赛道，我们已经快人一步。</div>
+        </div>
+        <div class="item">
+          <div class="tip suojin">
+            悟空云也在fil熊市布局生态。我们通过努力找到一家传统资本。在海外愿意投硬件存储，向市场寻找持币用户进行联合挖矿。挖矿成本一个人一半，收益也一人一半。结合机房成本，人工管理成本，封装成本，阿里IPFS硬盘成本，合计每T定价500元RMB。所以想参与联合挖矿的会员可出500块RMB，或者10个fil币。消耗1个GAS，540天后退还9个fil。挖矿日产分50%。
+          </div>
+        </div>
+        <div class="item">
+          <div class="tip suojin">
+            布局优势，传统资本注重看得见的投资，所以愿意投资硬件。玩家将有限的资金尽可能多的投到fil币上。老会员拉低了原来的平均价，新会员低位入市，并且币本位年化在30%以上，比投资传统生意靠谱。其次现在fil是触底价格，未来随便升值年化都远远超过30%。
+          </div>
+        </div>
+        <div class="item">
+          <div class="tip suojin">
+            当前向全体会员招募持币联合挖矿的会员，或者愿意来做这块业务的市场销售总监。销售政策为，每找来100个fil联合挖矿的返1个fil币。如果业绩做的非常好。每个月前20名销售人员，送封装好的有效算力。具体数字可根据个人能力见面详谈。在熊市相信悟空云，愿意跟着悟空云的都能布局1-2P的算力。
+          </div>
+        </div>
+        <div class="item bottoms">
+          <div class="tip suojin">全国有愿意的可线上报名，我们全国只招募30个销售负责人在西安碰面商讨销售市场事宜。并且参加我司的检索矿机的发布大会。</div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="titles">报名信息</div>
+        <div class="biaodan">
+          <div class="item1">
+            <div class="lable">您的姓名</div>
+            <input type="text" v-model="name" placeholder="请输入您的姓名">
+          </div>
+          <div class="item1">
+            <div class="lable">您的电话</div>
+            <input type="number" oninput="if(value.length>11)value=value.slice(0,11)" maxlength="11" v-model="phone"
+              placeholder="您的联系电话">
+          </div>
+          <div class="item1">
+            <div class="lable">预计销售市场</div>
+            <input type="text" v-model="market" placeholder="请填入您预计销售市场数量">
+          </div>
+        </div>
+        <div class="btns" @click="baoming">我要报名</div>
+      </div>
+      <div class="bottom">
+        <img src="images/banner/bottom.png" />
+      </div>
+    </div>
+    <div class="tree tree1">
+      <img src="images/banner/tree.png" />
+    </div>
+    <div class="tree tree2">
+      <img src="images/banner/tree.png" />
+    </div>
+  </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.js"></script>
+<script src="dist/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '.vueBox',
+    data: {
+      name: '',
+      phone: '',
+      market: ''
+    },
+    methods: {
+      baoming () {
+        if (this.name == '' || this.phone == '' || this.market == '') return
+        let that = this
+        let formData = new FormData()
+        formData.append('name', this.name)
+        formData.append('phone_num', this.phone)
+        formData.append('market', this.market)
+        axios({
+          url: 'http://api.zhaoyicheng.cc/api/sale-register/create',
+          data: formData,
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+        }).then(res => {
+          if (res.data.success) {
+            that.loading("success", "提交成功", true);
+            that.name = ''
+            that.phone = ''
+            that.market = ''
+          } else {
+            that.loading("warning", '提交失败');
+          }
+        })
+      },
+      loading (type, text, fixed = false) {
+        var model = ele("#model");
+        if (!model) {
+          model = document.createElement("div");
+          model.id = "model";
+          document.body.appendChild(model)
+        }
+        model.innerHTML =
+          "<button onclick='" +
+          (fixed ? "" : "removeModel()") +
+          "' class='box global-shadow'>" +
+          "<div class='tips'>" +
+          `<img class="${type === "loading" ? "rotate" : ""
+          }" src="images/${type}.png" />` +
+          `<span>${text}</span>` +
+          "</div>";
+        ("</button>");
+        setTimeout(() => {
+          document.getElementById('model').remove()
+        }, 2000)
+      }
+    }
+  })
+</script>
+
+</html>

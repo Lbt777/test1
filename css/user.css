@@ -1,0 +1,163 @@
+body{
+  background-color: #F7F7FA;
+}
+.top-part {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.top-part button img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 1rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.top-part > h2 {
+  width: 100%;
+}
+.top-part > div:nth-child(2) {
+  width: 100%;
+}
+.top-part > div:nth-child(2) span {
+  color: orange;
+}
+.top-part > a > img {
+  width: 1.5rem;
+}
+.assets {
+  background-color: #fff;
+  overflow-x: scroll;
+  padding-top: 0.5rem;
+}
+.assets * {
+  color: #fff;
+}
+.assets > div {
+  width: 36rem;
+  display: flex;
+  padding-left: 0.5rem;
+}
+.assets > div > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 16rem;
+  padding: 0.6rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+}
+.assets > div > div > a,
+.assets > div > div > div {
+  display: flex;
+  align-items: center;
+}
+.assets > div > div > a:first-child > div {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+.assets > div > div > a:first-child img {
+  width: 100%;
+}
+.assets > div > div > a:first-child span {
+  font-size: 1.2rem;
+}
+.assets > div > div > a:nth-child(2) {
+  margin: 0.5rem 0;
+  justify-content: space-between;
+}
+.assets > div > div > a:nth-child(2) > div > p:first-child {
+  font-size: 0.8rem;
+  color: #f9f9f9ad;
+  margin-bottom: 0.2rem;
+}
+.assets > div > div > div:nth-child(3) {
+  justify-content: flex-end;
+}
+.assets > div > div > div:nth-child(3) a {
+  margin-left: 1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: 0.9rem;
+  border: 1px solid #fff;
+}
+.powers {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+.powers > a {
+  background-color: #f3f9ff;
+  width: 36%;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+.powers > a > img {
+  width: 2.2rem;
+  margin-right: 0.5rem;
+}
+.powers > a > div > p:first-child {
+  font-size: 0.9rem;
+}
+.examinebox{
+  margin: 0 0.6rem;
+  margin-top: 0.6rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 1rem 1.5rem;
+}
+.examinebox img{
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.2rem;
+}
+.examinebox p{
+  font-size: 1rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.6rem;
+  margin-top: 0.6rem;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+.btns > a:first-child {
+  /* display: none; */
+}
+.btns > a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.btns span {
+  width: 70%;
+  margin: 1rem;
+  text-align: left;
+}
+.btns img {
+  width: 6%;
+  margin-left: 0.4rem;
+}
+.btns > a::after,
+.btns > button::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/enter.png) no-repeat;
+  background-size: 20px 20px;
+  margin-left: 1rem;
+}

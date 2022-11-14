@@ -1,0 +1,10 @@
+.empty-tips {
+  display: inline-block;
+  font-size: 12px;
+  color: #ababab;
+  vertical-align: middle;
+  min-height: 30px;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}

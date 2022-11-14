@@ -1,0 +1,135 @@
+.top-part * {
+  color: #fff;
+}
+.top-part {
+  background-image: url(../images/data-bg.png);
+  background-color: #0556e0;
+  background-position: right;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.4rem;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.top-part > div:first-child {
+  margin-bottom: 1rem;
+  display: flex;
+}
+.top-part > div:first-child > img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.top-part > div:first-child div:nth-child(2) {
+  /* width: 100%; */
+}
+.top-part > div:first-child div:nth-child(2) div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-part > div:first-child div:nth-child(2) div img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.2rem;
+}
+.top-part > div:first-child div:nth-child(2) p:nth-child(2) {
+}
+.top-part > div:nth-child(2) > p {
+  text-align: center;
+}
+.top-part > div:nth-child(2) > a p:first-child {
+  height: 1.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.top-part > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 今日收益 */
+.todayProfit{
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-bottom: 1rem;
+}
+.todayProfit img{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.tabBox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.tabBox div{
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.details {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 14px;
+}
+.details span {
+  margin-top: 0.4rem;
+  color: #757575;
+  display: block;
+}
+.details table tr:not(:first-child) td {
+  padding-top: 0.3rem;
+}
+.details table tr > td:first-child {
+  color: #464646;
+  width: 23%;
+  vertical-align: top;
+}
+.details table tr > td:nth-child(2) {
+  text-align: left;
+  color: #404040;
+}
+dl dt,
+dl dd {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+dl dt {
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+}
+dl dt > span:first-child span {
+  margin-left: 0.3rem;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+  color: #fff;
+}
+dl dt > span:nth-child(2) {
+  color: #636363;
+}
+dl dd {
+  margin: 0.5rem;
+  margin-top: 0;
+  padding: 0.5rem;
+  padding-top: 0;
+  border-bottom: 1px solid #e7eaed;
+}
+dl dd > span > span {
+  color: #000;
+  margin-right: 0.5rem;
+}
+dl dd > button {
+  margin-right: 0.5rem;
+}

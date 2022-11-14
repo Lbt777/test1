@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>有效算力</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/minirefresh.css" />
+  <link rel="stylesheet" href="css/record.css" />
+  <style>
+    .data-list dt,
+    .data-list dd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      margin: 0 0.5rem;
+      padding: 0.3rem;
+    }
+
+    .data-list dd {
+      padding-top: 0;
+      border-bottom: 1px solid #e7eaed;
+    }
+
+    .data-list dt>span {
+      font-size: 0.9rem;
+    }
+
+    .data-list dt>span>span {
+      font-size: 1.2rem;
+      margin-right: 0.2rem;
+    }
+
+    .data-list dd>span,
+    .tig {
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    .details {
+      width: 100%;
+      background-color: #fff;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .details>div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    .details>p {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 1rem;
+    }
+
+    .details span {
+      font-size: 0.9rem;
+    }
+
+    .details>p>span:first-child {
+      color: #757575;
+    }
+
+    .details>p>span:last-child {
+      color: #404040;
+    }
+
+    .details>div:last-child {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      border-top: 1px solid #ccc;
+    }
+
+    .details>div:last-child button {
+      background: #c1c1c1;
+      color: #fff;
+      padding: 0.2rem 1rem;
+      border-radius: 0.2rem;
+    }
+
+    #paymentServiceFeeID {
+      height: 22px;
+      line-height: 22px;
+    }
+
+    .tol {
+      justify-content: flex-start !important;
+    }
+
+    .huizong {
+      display: flex;
+      font-size: 12px;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .huizong span span {
+      font-size: 1rem;
+    }
+
+    #minirefresh {
+      top: 133px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button onclick="window.history.back()">
+      <img src="images/back.png" />
+    </button>
+    <span>联合存储</span>
+    <div></div>
+  </div>
+  <div class="top-part">
+    <img style="margin-right: 0.5rem;" src="images/poweractive.png" />
+    <div>
+      <div>
+        <p>挖矿汇总</p>
+        <button id="PowerActiveBtn" onclick="activate()">激活</button>
+      </div>
+      <div class="huizong">
+        <span>甲提供<span id="power"></span>T</span>
+        <span>乙质押<span id="pledgeFil"></span>FIL</span>
+        <span>总Gas<span id="gass"></span>FIL</span>
+      </div>
+      <p id="paymentServiceFeeID"></p>
+    </div>
+  </div>
+  <div id="minirefresh" class="minirefresh-wrap">
+    <div class="minirefresh-scroll">
+      <dl class="data-list" id="listdata"></dl>
+    </div>
+  </div>
+  <div class="global-shadow">
+    <div class="details">
+      <div>
+        <p>算力详情</p>
+        <button style="width: 15%" onclick="popup(0)">
+          <img src="images/close.png" width="40%" />
+        </button>
+      </div>
+      <p>
+        <span>甲方提供算力：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>乙方提供FIL：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>挖矿类型：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>质押数量：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>Gas费：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>生效时间：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>有效期至：</span>
+        <span></span>
+      </p>
+      <p>
+        <span>状态：</span>
+        <span></span>
+      </p>
+      <div id="last">
+        <span>已冻结<span id="freeze"></span>FIL</span>
+        <button id="cancelSeal">取消</button>
+      </div>
+    </div>
+  </div>
+  <div class="global-shadow">
+    <div class="payment">
+      <div>
+        <span>联合存储算力激活</span>
+        <button style="width: 15%" onclick="popup(0, 1)">
+          <img src="images/close.png" width="40%" />
+        </button>
+      </div>
+      <div>
+        <!-- <div class="one">
+          <span>余额：</span>
+          <span><span id="fil">0</span>FIL</span>
+        </div> -->
+      </div>
+      <div class="two">
+        <span>需甲方提供算力：</span>
+        <span>每T封装最低成本：<span id="cost">0</span>FIL</span>
+      </div>
+      <input type="number" onchange="changeAmount()" />
+      <div class="two">
+        <span>乙方提供FIL：</span>
+        <span><span id="totalCost">0</span>FIL</span>
+      </div>
+      <!-- <div class="two tol">
+        <span id="totalCost">0</span>FIL</span>
+      </div> -->
+      <!-- <div class="two">
+        <span>自定义每T成本：</span>
+        <span>每T封装最低成本：<span id="cost">0</span>FIL</span>
+      </div> -->
+      <!-- <input type="number" id="costs" readonly placeholder="请输入封装成本" /> -->
+      <div class="two">
+        <span>支付密码：</span>
+        <!-- <span>共支付：<span id="totalCost">0</span>FIL</span> -->
+      </div>
+      <input type="password" placeholder="请输入支付密码" />
+      <div class="two">
+        <span>余额：</span>
+        <span><span id="fil">0</span>FIL</span>
+      </div>
+      <div class="two">
+        <span class="tig">甲方提供<span id="tSum"></span>T算力，乙方提供<span id="tSum2"></span>FIL，Gas消耗<span
+            id="tSum3"></span>FIL</span>
+      </div>
+      <button onclick="next()" class="btn">确认</button>
+    </div>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/minirefresh.js"></script>
+<script src="dist/js/pagination.js"></script>
+<script src="dist/js/powerrecord.js"></script>
+
+</html>

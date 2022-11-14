@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>充币审核</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <style>
+      html,body{
+        background-color: #F7F7FA;
+      }
+      .statusBar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+      }
+      .statusBar > button {
+        width: 25%;
+        font-size: 0.8rem;
+      }
+      .item {
+        background: #fff;
+        display: block;
+        padding: 0.8rem 1.2rem;
+        margin:0 0.7rem 0.5rem;
+        border-radius: 0.2rem;
+      }
+      .item > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item > div:first-child {
+        margin-bottom: 0.5rem;
+      }
+      .centeritem{
+        padding: 0.8rem 0;
+      }
+      .centeritem > div{
+        width: 30%;
+      }
+      
+      .centeritem > div > p{
+        text-align: center;
+      }
+      .centeritem > div > p:nth-child(1){
+        margin-bottom: 0.2rem;
+      }
+      .item > div:nth-child(4) > span{
+        padding-top: 0.5rem;
+        color: #999999;
+        font-size:0.8rem;
+        padding-bottom: 1rem;
+      }
+
+      .btnsBox{
+        border-top: 1px solid #EDEDED;
+        padding-top: 1rem;
+        display:flex;
+        justify-content: flex-end !important;
+      }
+      .btnsBox > div:nth-child(1){
+        width:5rem;
+        height:1.8rem;
+        border-radius:0.9rem;
+        border: 1px solid #494C5A;
+        text-align:center;
+        line-height:1.8rem;
+        margin-right: 1rem;
+      }
+      .btnsBox > div:nth-child(2){
+        width:5rem;
+        height:1.8rem;
+        background:#3775F6;
+        border-radius:0.9rem;
+        text-align:center;
+        line-height:1.8rem;
+      }
+      .minirefresh-scroll {
+        background-color: #F7F7FA;
+      }
+      .minirefresh-theme-default .minirefresh-upwrap{
+        background-color: #F7F7FA;
+      }
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>充币审核</span>
+      <div></div>
+    </div>
+    <div class="statusBar">
+        <div>
+            <button onclick="switchStatus(0)">全部</button>
+            <span style="width:2rem;margin:0.4rem auto 0;height:0.1rem;background-color:#fff;display:block;border-radius: 0.1rem;"></span>
+        </div>
+        <div>
+            <button onclick="switchStatus(1,1)">待审核</button>
+            <span style="width:2rem;margin:0.4rem auto 0;height:0.1rem;background-color:#fff;display:block;border-radius: 0.1rem;"></span>
+        </div>
+        <div>
+            <button onclick="switchStatus(2,4)">已完成</button>
+            <span style="width:2rem;margin:0.4rem auto 0;height:0.1rem;background-color:#fff;display:block;border-radius: 0.1rem;"></span>
+        </div>
+    </div>
+    <div id="minirefresh" class="minirefresh-wrap">
+      <div class="minirefresh-scroll">
+        <dl class="data-list" id="listdata"></dl>
+      </div>
+    </div>
+  </body>、
+  <script src="dist/js/iconfont.js"></script>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/minirefresh.js"></script>
+  <script src="dist/js/pagination.js"></script>
+  <script src="dist/js/rechargeMissions.js"></script>
+</html>

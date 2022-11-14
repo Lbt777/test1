@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>实名认证</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    .proofs {
+      padding: 1rem;
+    }
+
+    .proofsp {
+      margin-bottom: 300px;
+    }
+
+    .upBut {
+      border: 2px dashed #ccc;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .upImg {
+      width: 2rem;
+    }
+
+    .realBtn {
+      position: fixed;
+      bottom: 2rem;
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    .realBtn button {
+      padding: 0.6rem;
+      width: 100%;
+      background-color: #5c92ff;
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+
+    #video {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .tipsx {
+      position: fixed;
+      color: red;
+      z-index: 2;
+      top: 12vh;
+    }
+
+    .page2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-y: scroll;
+      height: calc(100% - 3rem);
+    }
+
+    #canvasCamera {
+      display: none;
+    }
+
+    .marsk {
+      margin: auto;
+      margin-top: 23vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      padding: 0.5em;
+      background: rgba(255, 255, 255, 0);
+      z-index: 2;
+      box-shadow: 0 0 0 9999em rgba(255, 255, 255);
+      background-size: 6px 20px, 20px 6px, 6px 20px, 20px 6px;
+      border-radius: 50%;
+    }
+
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 3;
+    }
+
+    .page1 {
+      height: calc(100vh - 3rem);
+      overflow-y: scroll;
+      padding-bottom: 300px;
+    }
+
+    .tips {
+      top: auto;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div style="height: 3rem;width:100%;"></div>
+    <div class="header">
+      <button @click="back">
+        <img src="images/back.png" />
+      </button>
+      <span>实名认证</span>
+      <div></div>
+    </div>
+    <div class="page1" v-if="show">
+      <div class="proofs">
+        <p>身份证人像面</p>
+        <button class="upBut upButP" @click="uploadFilePositive(1)">
+          <img class="upImg" id="Positive" src="images/upload.png">
+        </button>
+        <input class="positive" type="file" style="display: none" accept="image/*">
+      </div>
+      <div class="proofs proofsp">
+        <p>身份证国徽面</p>
+        <button class="upBut upButS" @click="uploadFilePositive(0)">
+          <img class="upImg" id="PositiveS" src="images/upload.png">
+        </button>
+        <input class="positive" type="file" style="display: none" accept="image/*">
+      </div>
+      <div class="realBtn">
+        <button @click="prepare">开始认证</button>
+      </div>
+    </div>
+    <div class="page2" v-else>
+      <div class="marsk"></div>
+      <div class="tipsx">{{tips}}</div>
+      <video ref="video" id="video" autoplay="autoplay" poster="images/fff.png" muted></video>
+      <canvas id="canvasCamera"></canvas>
+      <!-- <div v-if="imgSrc" class="img_bg_camera">
+        <img :src="imgSrc" class="tx_img" />
+      </div> -->
+      <!-- <div @click="setImage" style="position: relative;z-index: 999;">手动</div> -->
+    </div>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/WangYuLue/image-conversion/build/conversion.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      MAX: 10,
+      current: 0,
+      step: 30,
+      tips: '请正对摄像头',
+      idCardP: '',
+      idCardS: '',
+      show: false,
+      idCardUrl_0: '',
+      idCardUrl_1: '',
+      timer: null,
+      width: 375,
+      imgList: []
+    },
+    mounted () {
+      this.init()
+      if (this.show === false) {
+        this.prepare()
+      }
+    },
+    methods: {
+      // 初始化
+      init () {
+        recoginz('', res => {
+          if (res.data) {
+            this.srtatFace()
+          }
+        })
+      },
+      // 人脸检测
+      async FaceDetection () {
+        let file = await this.canvasToFile()
+        let url = await this.idCardUpLoad(file)
+        userDetectface({
+          url: url
+        }, res => {
+          if (res.data) {
+            let data = typeof res.data === 'string' ? JSON.parse(res.data) : res.data
+            if (data.FaceCount) {
+              this.current = 0
+              this.tips = '正在识别，请稍后'
+              this.Detectliveface(url)
+            } else {
+              this.current++
+              if (this.current >= this.MAX) {
+                confirmNoCenel('认证失败', () => {
+                  window.history.back()
+                });
+              } else {
+                this.tips = '没有检测到人脸'
+                // 重复检测
+                setTimeout(() => {
+                  this.setImage()
+                }, 500);
+              }
+            }
+          }
+        })
+      },
+      // 活体检测
+      async Detectliveface () {
+        let maxImgListLength = 3
+        this.setImage('base64')
+        let file = await this.canvasToFile()
+        let url = await this.idCardUpLoad(file)
+        this.imgList.push(url)
+        if (this.imgList.length >= maxImgListLength) {
+          let parms = {
+            urls: this.imgList.join(',')
+          }
+          console.log('parms', parms)
+          userDetectliveface(parms, res => {
+            console.log('活体检测', res)
+            this.imgList = []
+            let data = res.data.Elements
+            let status = false
+            data.forEach(el => {
+              if (el.Results[0].Label === 'normal') {
+                status = true
+              }
+            });
+            if (status) {
+              this.tips = '人脸识别成功，正在实名认证'
+              // 人证对比
+              setTimeout(() => {
+                this.Ompareface(data[0].ImageURL)
+              }, 1000);
+            } else {
+              this.tips = '识别失败，正在重试'
+              this.Detectliveface()
+            }
+          })
+        } else {
+          this.Detectliveface()
+        }
+      },
+      // 人脸1：1
+      Ompareface (url) {
+        userompareface({
+          url
+        }, res => {
+          // Confidence的值大于40，即判定人证合一比对成功
+          console.log('人脸1：1', res)
+          if (res.success) {
+            if (res.data.Confidence >= 40) {
+              confirmNoCenel("认证成功", () => {
+                console.log('购买！！！')
+                if (window.location.search) {
+                  window.location.replace = 'commodity.html' + window.location.search
+                } else {
+                  window.history.back()
+                }
+              });
+            } else {
+              this.tips = '人证不符，认证失败'
+              confirmNoCenel(this.tips, () => {
+                this.show = true
+                this.$nextTick(() => {
+                  this.init()
+                });
+              });
+            }
+          } else {
+            this.tips = res.message || '人证不符，认证失败'
+            confirmNoCenel(this.tips, () => {
+              this.show = true
+              this.$nextTick(() => {
+                this.init()
+              });
+            });
+          }
+        })
+      },
+      // 开始认证
+      async prepare () {
+        let that = this
+        if (that.idCardS && that.idCardS) {
+          loading("loading", "图片压缩中...", true)
+          console.log(that.idCardP, that.idCardS)
+          let list = [that.idCardP, that.idCardS]
+          let resList = []
+          list.forEach(async (el, index) => {
+            let res = await that.idCardUpLoad(el, 'yes')
+            that[`idCardUrl_${index}`] = res
+            resList.push(res)
+            if (resList.length == 2) {
+              removeModel()
+              // 校验身份证号
+              recoginzecard({
+                back: this.idCardUrl_1, // 国徽面
+                face: this.idCardUrl_0 // 人像面
+              }, res => {
+                if (res.success) {
+                  this.srtatFace()
+                } else {
+                  confirmNoCenel(res.message || "身份证人像面识别失败", () => { });
+                }
+              })
+            }
+          })
+        } else {
+          confirmNoCenel("请选择图片", () => { });
+        }
+      },
+      srtatFace () {
+        this.show = false
+        setTimeout(() => {
+          let canvas = document.getElementById("canvasCamera");
+          this.width = window.screen.width || 375
+          canvas.width = this.width
+          canvas.height = this.width
+          this.getCamera(res => {
+            if (!res) return
+            setTimeout(() => {
+              this.setImage()
+            }, 2000)
+          });
+        }, 500);
+      },
+      // 拍照 绘制图片
+      setImage (val) {
+        console.log('拍照');
+        let video = document.getElementById("video")
+        if (!video) return;
+        // 点击canvas画图
+        let canvas = document.getElementById("canvasCamera");
+        let ctx = canvas.getContext('2d');
+        //绘图
+        ctx.drawImage(video, 0, 0, this.width, this.width);
+        this.convertCanvasToImage(canvas)
+        if (!val) {
+          //人脸检测
+          // this.FaceDetection()
+        }
+      },
+      canvasToFile () {
+        return new Promise((resolve, reject) => {
+          let canvas = document.getElementById("canvasCamera");
+          var dataurl = canvas.toDataURL("image/png");
+          let fileName = new Date().getTime() + '.jpg'
+          var arr = dataurl.split(','),
+            mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]),
+            n = bstr.length,
+            u8arr = new Uint8Array(n);
+          while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+          }
+          var file = new File([u8arr], fileName, { type: mime });
+          file.lastModifiedDate = new Date();
+          resolve(file)
+        })
+      },
+      fileToBase64 (file) {
+        return new Promise((resolve, reject) => {
+          let reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = function (e) {
+            resolve(e.target.result)
+          }
+        })
+      },
+      // 获取摄像头
+      geteDevices () {
+        let videoInputList = []
+        return new Promise((resolve, reject) => {
+          navigator.mediaDevices.enumerateDevices().then(res => {
+            console.log('所有设备', res)
+            // 前0后1
+            res.forEach(item => {
+              if (item.kind === 'videoinput') {
+                videoInputList.push(item)
+              }
+            })
+            resolve(videoInputList)
+          })
+        })
+      },
+      // 调用打开摄像头功能
+      async getCamera (callback) {
+        console.log('调用打开摄像头功能')
+        let videoInputList = await this.geteDevices()
+        console.log('设备列表', videoInputList)
+        let constraints = {
+          video: {
+            deviceId: videoInputList[0]
+          }
+        };
+        console.log(constraints)
+        let video = document.getElementById("video");
+        let promise = navigator.mediaDevices.getUserMedia({ video: constraints });
+        promise.then((MediaStream) => {
+          console.log('成功', MediaStream)
+          video.srcObject = MediaStream;
+          video.play();
+          callback(true)
+        }).catch(error => {
+          callback(false)
+          let err = error.toString()
+          console.log('打开摄像头失败', error, err)
+          if (err.indexOf('Permission') > -1) {
+            confirmNoCenel("权限被拒绝", () => {
+              this.show = true
+            });
+          } else {
+            confirmNoCenel(err, () => {
+              this.show = true
+            });
+          }
+        })
+      },
+      convertCanvasToImage (canvas) {
+        var image = new Image();
+        image.src = canvas.toDataURL("image/png");
+        return image;
+      },
+      uploadFilePositive (val) {
+        let that = this
+        const uploadInput = ele(".proofs").querySelector(".positive");
+        const uploadPositive = ele(".proofs").querySelector(".upButP");
+        const uploadS = ele(".proofsp").querySelector(".upButS");
+        uploadInput.click()
+        uploadInput.onchange = async () => {
+          if (val) {
+            // 1
+            that.idCardP = uploadInput.files[0]
+            ele("#Positive").src = window.URL.createObjectURL(that.idCardP);
+            ele("#Positive").style.width = "100%";
+            uploadPositive.style.border = "none";
+            uploadPositive.style.padding = "0";
+            this.idCardUrl_1 = ''
+          } else {
+            // 2
+            that.idCardS = uploadInput.files[0]
+            ele("#PositiveS").src = window.URL.createObjectURL(that.idCardS);
+            ele("#PositiveS").style.width = "100%";
+            uploadS.style.border = "none";
+            uploadS.style.padding = "0";
+            this.idCardUrl_0 = ''
+          }
+        };
+        uploadInput.value = ''
+      },
+      // 图片压缩及上传
+      idCardUpLoad (file, isYaSuo) {
+        return new Promise(async (resolve, reject) => {
+          let compressImg = file
+          if (isYaSuo && (this.idCardUrl_0 === '' || this.idCardUrl_1 === '')) {
+            compressImg = await imageConversion.compressAccurately(file, 2900)
+          }
+          uploadIdCard(compressImg, res => {
+            if (res.success) {
+              resolve(res.data.url)
+            } else {
+              confirmNoCenel(res.message, () => { });
+              reject('error')
+            }
+          })
+        })
+      },
+      back () {
+        if (this.show === false) {
+          this.show = true
+          this.$nextTick(() => {
+            this.init('back')
+          });
+        } else {
+          window.history.back()
+        }
+      },
+      showImg () {
+        if (this.idCardUrl_1) {
+          const uploadS = ele(".proofsp").querySelector(".upButS");
+          ele("#PositiveS").src = this.idCardUrl_1
+          ele("#PositiveS").style.width = "100%";
+          uploadS.style.border = "none";
+          uploadS.style.padding = "0";
+        }
+        if (this.idCardUrl_0) {
+          const uploadPositive = ele(".proofs").querySelector(".upButP");
+          ele("#Positive").src = this.idCardUrl_0
+          ele("#Positive").style.width = "100%";
+          uploadPositive.style.border = "none";
+          uploadPositive.style.padding = "0";
+        }
+      }
+    }
+  })
+</script>
+
+</html>

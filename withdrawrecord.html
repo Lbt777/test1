@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>提币记录</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <link rel="stylesheet" href="css/record.css" />
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>提币记录</span>
+      <div></div>
+    </div>
+    <div id="minirefresh" class="minirefresh-wrap">
+      <div class="minirefresh-scroll">
+        <dl class="data-list record" id="listdata"></dl>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/minirefresh.js"></script>
+  <script src="dist/js/pagination.js"></script>
+  <script src="dist/js/withdrawrecord.js"></script>
+</html>

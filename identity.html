@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>实名认证</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>实名认证</span>
+      <div></div>
+    </div>
+    <div class="inputs">
+      <p>姓名</p>
+      <input type="text" placeholder="请输入您的姓名" />
+      <p>身份证</p>
+      <input type="text" placeholder="请输入身份证号" maxlength="21" />
+      <button class="btn" onclick="next()">保存</button>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/identity.js"></script>
+</html>

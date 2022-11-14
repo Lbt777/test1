@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>注册</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .inputs {
+      margin-top: 20vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-top-circle"></div>
+  <div class="inputs">
+    <h2 i18n="SignUp">注册</h2>
+    <input type="tel" i18n-p="SignPhone" placeholder="请输入手机号" maxlength="11" />
+    <input type="text" i18n-p="SignCode" placeholder="请输入推荐码" />
+    <div>
+      <div>
+        <span i18n="SignHave">已有账号?</span>
+        <button onclick="window.location.href='signin.html'" id="signinBtn" i18n="SignIn">
+          登录
+        </button>
+      </div>
+    </div>
+    <button class="btn" onclick="next()" i18n="SignNext">下一步</button>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/signup.js"></script>
+<script src="dist/js/jquery.js"></script>
+<script src="i18n/jquery.i18n.properties-min-1.0.9.js"></script>
+<script src="i18n/language.js"></script>
+
+</html>

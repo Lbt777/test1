@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>线性释放</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <link rel="stylesheet" href="css/record.css" />
+    <style>
+      dl dt,
+      dl dd {
+        display: flex;
+        background-color: #fff;
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+      }
+      dl dt {
+        justify-content: space-between;
+      }
+      dl dd {
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        border-bottom: 1px solid #e7eaed;
+      }
+      dl dt > span:first-child {
+        font-size: 20px;
+      }
+      dl dt > span:first-child span {
+        margin-left: 0.3rem;
+        font-size: 14px;
+      }
+      dl dt > span:nth-child(2) {
+        color: #909090;
+      }
+      dl dd > span:nth-child(odd) {
+        font-size: 0.8rem;
+      }
+      dl dd > span:nth-child(2) {
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>线性释放</span>
+      <div></div>
+    </div>
+    <div class="top-part">
+      <img src="images/fil.png" />
+      <div>
+        <p>
+          待释放
+          <button onclick="explain()">
+            <img src="images/remark.png" />
+          </button>
+        </p>
+        <p><span id="vestingFil"></span> FIL</p>
+      </div>
+    </div>
+    <div id="minirefresh" class="minirefresh-wrap">
+      <div class="minirefresh-scroll">
+        <dl class="data-list" id="listdata"></dl>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/minirefresh.js"></script>
+  <script src="dist/js/pagination.js"></script>
+  <script src="dist/js/linearrecord.js"></script>
+</html>

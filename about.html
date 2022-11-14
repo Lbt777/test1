@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>关于我们</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <style>
+        body {
+          background-color: #fff;
+        }
+        .mains {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .mains p {
+          font-size: 20px;
+          margin-top: 1rem;
+          color: #404040;
+        }
+
+        dl > dt {
+        margin: 0 1rem;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e4e4e4;
+      }
+      .btn {
+        width: calc(100% - 2rem);
+        position: absolute;
+        bottom: 0;
+        margin: 1rem;
+      }
+      dl > dt > a,
+      dl > dt > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>关于我们</span>
+      <div></div>
+    </div>
+    <div class="mains">
+        <img style="width: 6rem;border-radius: 1rem;" src="images/logo/logo.png" />
+        <p id="appName"></p>
+        <div id="hanruiMsg" style="display: none;">
+          <p style="font-size:14px; margin: 20px 20px 10px;text-indent:2em; ">涵锐科技是一家专注于区块链分布式存储技术研发，集存储服务器销售、托管，数据中心运营、分布式存储应用为一体的高新技术企业，致力于区块链技术落地应用及IPFS全球生态。
+          <p style="font-size:14px; margin: 0 20px;text-indent:2em;">涵锐科技总部位于中国四川成都，团队来自莫斯科算法实验室、边缘智能研究实验室、视觉算法团队，华为、阿里云、AMD、英业达等互联网巨头企业的软件、运维、硬件和芯片技术研发的专家骨干组成。拥有行业优质的人才资源，并具备行业庞大的团队规模。</p>
+        </div>
+        <div id="xiangxiangkejiMsg" style="display: none;">
+          <p style="font-size:14px; margin: 20px 20px 10px;text-indent:2em; ">香香科技一家集IPFS分布式存储服务
+            器研发、生产、销售于一体的高科技公司。致力于IPFS分布式存储生态建设。公司坐落于西安，由本地具有影响力
+            和知名度的商协会发起，联合本地头部企业、知名区块链技术公司、行业专家学者等共同成立。
+          </p>
+          <p style="font-size:14px; margin: 0 20px;text-indent:2em;">自2020年始，香香科技团队成员的足迹遍布
+            大半个中国，本着“为IPFS布道、为Filecoin发声”的初心，先后
+            在深圳、广州、北京、杭州、合肥、长沙、武汉、西安等地进行行业走访及演讲布道。
+          </p>
+        </div>
+        <div id="ipfs88" style="display: none;">
+          <p style="font-size:14px; margin: 20px 20px 10px;text-indent:2em; ">九星云创是一家专注于区块链分布式存储技术研发，集存储服务器销售、托管，数据中心运营、分布式存储应用为一体的高新技术企业，致力于区块链技术落地应用及IPFS全球生态。
+          </p>
+          <p style="font-size:14px; margin: 0 20px;text-indent:2em;">九星云创总部位于中国四川成都，团队来自、边缘智能研究实验室、视觉算法团队，华为、阿里云、英业达等互联网巨头企业的软件、运维、硬件和芯片技术研发的专家骨干组成。拥有行业优质的人才资源，并具备行业庞大的团队规模。
+          </p>
+        </div>
+    </div>
+    <div style="width: 100%;height: 0.3rem;background-color: #fff;"></div>
+    <div id="hanrui" style="display: none;">
+      <dl>
+        <dt>
+          <span>官网</span>
+          <span id="phone">http://www.ipfshr.com</span>
+        </dt>
+        <dt>
+          <span>合作邮箱</span>
+          <span id="phone">8888888@aliyun.com</span>
+        </dt>
+      </dl>
+      <div style="width: 100%;height: 0.3rem;background-color: #fff;"></div>
+      <dl >
+        <dt>
+          <a href="agrement1.html">
+            <span>隐私政策</span>
+            <img src="images/enter.png" width="6%" />
+          </a>
+        </dt>
+        <dt>
+          <a href="agreement2.html">
+            <span>服务协议</span>
+            <img src="images/enter.png" width="6%" />
+          </a>
+        </dt>
+      </dl>
+    </div>
+    <div id="ipfs88btn" style="display: none;">
+      <dl >
+        <dt>
+          <a href="agrement1.html">
+            <span>隐私政策</span>
+            <img src="images/enter.png" width="6%" />
+          </a>
+        </dt>
+        <dt>
+          <a href="agreement2.html">
+            <span>服务协议</span>
+            <img src="images/enter.png" width="6%" />
+          </a>
+        </dt>
+      </dl>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script>
+    if(baseUrl.indexOf("xiangxiang") != -1){
+      document.getElementById("xiangxiangkejiMsg").style.display="block";
+      document.getElementById("hanruiMsg").style.display="none";
+      document.getElementById("hanrui").style.display="none"
+      document.getElementById("ipfs88").style.display="none"
+      document.getElementById("ipfs88btn").style.display="none"
+    }else if(baseUrl.indexOf("hanrui") != -1){
+      document.getElementById("xiangxiangkejiMsg").style.display="none";
+      document.getElementById("hanruiMsg").style.display="block";
+      document.getElementById("hanrui").style.display="block"
+      document.getElementById("ipfs88").style.display="none"
+      document.getElementById("ipfs88btn").style.display="none"
+    }else if(baseUrl.indexOf("ipfs88") != -1){
+      document.getElementById("xiangxiangkejiMsg").style.display="none";
+      document.getElementById("hanruiMsg").style.display="none";
+      document.getElementById("hanrui").style.display="none"
+      document.getElementById("ipfs88").style.display="block"
+      document.getElementById("ipfs88btn").style.display="block"
+    }
+    getConfig((result) => {
+      ele("#appName").innerText=result.appTitle || "";
+    });
+  </script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>全网数据</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="css/swiper.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/minirefresh.css" />
+  <style>
+    .qrcode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: #f3f9ff;
+    }
+
+    .qrcode>img:nth-child(1) {
+      width: 4rem;
+      height: 4rem;
+      margin-top: 1rem;
+    }
+
+    .qrcode>span:nth-child(2) {
+      margin-top: 0.5rem;
+    }
+
+    .qrcode>img:nth-child(3) {
+      background-color: #fff;
+      width: 10rem;
+      height: 10rem;
+      margin: 2rem 0;
+    }
+
+    .qrcode>span:nth-child(5) {
+      color: #aaa;
+    }
+
+    .qrcode p {
+      background-color: #5c92ff;
+      padding: 1rem 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .qrcode p,
+    .qrcode button {
+      color: #fff;
+    }
+
+    .qrcode button {
+      background-color: #5c92ff;
+      margin: 1rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .qrcode span:nth-child(3) {
+      margin-bottom: 0.4rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button onclick="window.history.back()">
+      <img src="images/back.png" />
+    </button>
+    <span i18n="IndexAllData">全网数据</span>
+    <div></div>
+  </div>
+  <div class="datas">
+    <div style="padding-bottom: 0;border-bottom:none;">
+      <p i18n="IndexHeight">区块高度</p>
+      <p id="tipSetHeight">0</p>
+    </div>
+    <div style="padding-bottom: 0;border-bottom:none;">
+      <p i18n="IndexAllPower">全网有效算力（EiB）</p>
+      <p id="totalPower">0</p>
+    </div>
+    <div>
+      <p i18n="IndexReward">出块奖励（FIL）</p>
+      <p id="avgBlocksReword">0</p>
+    </div>
+    <div>
+      <p i18n="IndexActive">活跃存储提供者</p>
+      <p id="activeMiners">0</p>
+    </div>
+    <div>
+      <p i18n="IndexPledge">当前扇区质押量（FIL/T）</p>
+      <p id="currentPledgeCollateral">0</p>
+    </div>
+    <div>
+      <p i18n="IndexGas">32G扇区Gas消耗（FIL）</p>
+      <p id="gasIn32GB">0</p>
+    </div>
+    <div>
+      <p i18n="IndexProfit">24h平均收益（FIL/T）</p>
+      <p id="blockRewardIn24h">0</p>
+    </div>
+    <div>
+      <p i18n="IndexYesterday">昨日封装成本（FIL）</p>
+      <p id="yesterdayCost">0</p>
+    </div>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/clipboard.min.js"></script>
+<script src="ys/jquery.min.js"></script>
+<script src="i18n/jquery.i18n.properties-min-1.0.9.js"></script>
+<script src="i18n/language.js"></script>
+<script>
+  getNetworkData(({ data }) => {
+    ele("#tipSetHeight").innerHTML = data.tipSetHeight;
+    ele("#totalPower").innerHTML = data.totalPower.toFixed(4);
+    ele("#avgBlocksReword").innerHTML = data.avgBlocksReword.toFixed(4);
+    ele("#activeMiners").innerHTML = data.activeMiners;
+    ele("#blockRewardIn24h").innerHTML = data.blockRewardIn24h;
+    ele("#currentPledgeCollateral").innerHTML = (
+      data.currentPledgeCollateral * 32
+    ).toFixed(4);
+    ele("#gasIn32GB").innerHTML = data.gasIn32GB.toFixed(4);
+    ele("#yesterdayCost").innerHTML = data.cost0fSealingSectors || 0;
+  });
+</script>
+
+</html>

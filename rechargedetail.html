@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>充值详情</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <style>
+      .main {
+        height: calc(100% - 3rem);
+        overflow: scroll;
+      }
+      .qrcode {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        margin-top: 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: #f3f9ff;
+      }
+      #coinIcon {
+        width: 2rem;
+        margin: 1rem;
+      }
+      #coin {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      #qrcodeImg {
+        width: 10rem;
+        height: 10rem;
+        background-color: #fff;
+        padding: 1rem;
+        margin: 1rem;
+      }
+      .qrcode > span:nth-child(4) {
+        color: #a5a5a5;
+      }
+      #addressText {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        word-break: break-word;
+        text-align: center;
+      }
+      .qrcode button {
+        background-color: #5c92ff;
+        margin: 1rem;
+        padding: 0.4rem 1rem;
+        color: #fff;
+        border-radius: 0.2rem;
+      }
+      .coins {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+      }
+      .coins > button {
+        background-color: #dadada;
+        width: 4rem;
+        padding: 0.3rem 0;
+        border-radius: 0.2rem;
+        font-size: 0.9rem;
+        margin: 1rem 0.5rem;
+      }
+      .coins > button:nth-child(2) {
+        background-color: #5c92ff;
+        color: #fff;
+      }
+      .inputs {
+        background-color: #f3f9ff;
+        padding: 1rem;
+      }
+      .inputs > .btn {
+        margin-top: 0;
+      }
+      .proof {
+        display: none;
+        padding-bottom: 1rem;
+      }
+      .proof > button:nth-child(2) {
+        border: 2px dashed #ccc;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+      .proof > button:nth-child(4) {
+        margin-top: 1rem;
+        padding: 0.6rem;
+        width: 100%;
+        background-color: #5c92ff;
+        color: #fff;
+        border-radius: 0.5rem;
+      }
+      .proof button img {
+        width: 2rem;
+      }
+      .proof img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span id="title">充值详情</span>
+    </div>
+    <div class="main">
+      <div class="inputs">
+        <p>充值状态</p>
+        <input type="text" disabled='disabled' placeholder="请输入充值数量" />
+        <p>充值数量</p>
+        <input type="number" disabled='disabled' placeholder="请输入充值数量" />
+        <p>交易ID</p>
+        <input type="text" disabled='disabled' placeholder="请输入交易ID" />
+        <div class="proof" style="display: block;">
+          <p>支付凭证</p>
+          <button style="margin-left: 0;">
+            <img id="proof" src="images/upload.png" />
+          </button>
+          <input type="file" disabled='disabled' style="display: none" accept="image/*" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/rechargedetail.js"></script>
+</html>

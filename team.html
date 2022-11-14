@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>我的推荐</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/minirefresh.css" />
+    <style>
+      .top-part {
+        padding: 0 1rem;
+      }
+      .top-part > input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-size: 14px;
+        text-indent: 22px;
+        border-bottom: 1px solid #eee;
+        background: url(../images/search.png) no-repeat 0 0.8rem;
+        background-size: 1.2rem;
+        padding-left: 0.8rem;
+      }
+      .top-part > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+      }
+      .member {
+        padding: 0.6rem;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        display: flex;
+        margin: 0.5rem 1rem;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .member > img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 2rem;
+        margin-right: 0.5rem;
+      }
+      .member > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .member > div > div:first-child span:last-child {
+        margin-left: 0.6rem;
+        color: #ffcc6f;
+      }
+      .member > div > div:last-child {
+        font-size: 0.8rem;
+        display: flex;
+      }
+      .member > div > div span:nth-child(even) {
+        margin-right: 0.2rem;
+      }
+      .user > div:nth-child(5) {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button onclick="window.history.back()">
+        <img src="images/back.png" />
+      </button>
+      <span>我的推荐</span>
+      <div></div>
+    </div>
+    <div class="top-part">
+      <div>
+        <span>客户</span>
+        <span id="count">共0人</span>
+      </div>
+      <input type="search" id="teamSearch" />
+    </div>
+    <div id="minirefresh" class="minirefresh-wrap">
+      <div class="minirefresh-scroll">
+        <dl class="data-list" id="listdata"></dl>
+      </div>
+    </div>
+  </body>
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/minirefresh.js"></script>
+  <script src="dist/js/pagination.js"></script>
+  <script src="dist/js/team.js"></script>
+</html>

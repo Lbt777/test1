@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>充值</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <style>
+    body {
+      background: #f8f8f8;
+    }
+
+    .main {
+      height: calc(100% - 3rem);
+      overflow: scroll;
+    }
+
+    .qrcode {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    #coinIcon {
+      width: 2rem;
+      margin: 1rem;
+    }
+
+    #coin {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    #qrcodeImg {
+      width: 10rem;
+      height: 10rem;
+      background-color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .qrcode>span:nth-child(4) {
+      color: #a5a5a5;
+    }
+
+    #addressText {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      word-break: break-word;
+      text-align: center;
+    }
+
+    .qrcode button {
+      background-color: #f0f2fe;
+      width: 100%;
+      height: 40px;
+      margin: 1rem;
+      padding: 0.4rem 1rem;
+      color: #305dff;
+      border-radius: 0.2rem;
+    }
+
+    .coins {
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      margin: 10px 0;
+      justify-content: space-between;
+      height: 50px;
+    }
+
+    .coins>button {
+      background-color: #fff !important;
+      color: #333 !important;
+      padding: 0;
+      margin: 0;
+    }
+
+    .coins>button:nth-child(2) {
+      background-color: #5c92ff;
+      color: #fff;
+    }
+
+    .inputs {
+      background-color: #f3f9ff;
+      padding: 1rem;
+    }
+
+    .inputs>.btn {
+      margin-top: 0;
+    }
+
+    .proof {
+      display: none;
+      padding-bottom: 1rem;
+    }
+
+    .proof>button:nth-child(2) {
+      border: 2px dashed #ccc;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .proof>button:nth-child(4) {
+      margin-top: 1rem;
+      padding: 0.6rem;
+      width: 100%;
+      background-color: #5c92ff;
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+
+    .proof button img {
+      width: 2rem;
+    }
+
+    .proof img {
+      width: 100%;
+    }
+
+    .tipss {
+      padding: 15px;
+      font-size: 12px;
+      color: rgba(51, 51, 51, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button onclick="window.history.back()">
+      <img src="images/back.png" />
+    </button>
+    <span id="title">充币</span>
+    <button onclick="goRechargeRecord()">
+      <img src="images/record.png" />
+    </button>
+  </div>
+  <div class="main">
+    <div class="coins">
+      <span>链名称</span>
+      <button id="coinType">Filecoin</button>
+      <!-- <button onclick="setCoin('usdt')">USDT-TRC20</button> -->
+    </div>
+    <div class="qrcode">
+      <div id="qrcodeImg"></div>
+      <span id="coinTypeAddress">FIL充币地址</span>
+      <span id="addressText"></span>
+      <button id="copyBtn" data-clipboard-target="#addressText">复制地址</button>
+    </div>
+    <div class="tipss">请勿向上述地址充值任何非FIL资产，否则资产将不可找回。<br />请务必确认手机及浏览器安全，防止信息被篡改或泄露。</div>
+  </div>
+</body>
+<script src="dist/js/main.js"></script>
+<script src="dist/js/clipboard.min.js"></script>
+<script src="dist/js/qrcode.js"></script>
+<script src="dist/js/recharge.js"></script>
+
+</html>
