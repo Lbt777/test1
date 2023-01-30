@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0f049a"],{"9c71":function(t,e,n){"use strict";n.r(e),n.d(e,"getTAgentUserProfitLogList",(function(){return o}));var r=n("b775"),o=function(t){return Object(r["default"])({url:"/tAgentUserProfitLog/getTAgentUserProfitLogList",method:"get",params:t})}}}]);
