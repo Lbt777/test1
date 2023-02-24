@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21365b"],{ad02:function(o,n,t){"use strict";t.r(n),t.d(n,"getTBonusPoolsList",(function(){return u}));var s=t("b775"),u=function(o){return Object(s["default"])({url:"/tBonusPools/getTBonusPoolsList",method:"get",params:o})}}}]);
