@@ -1,1 +1,0 @@
-import{t}from"./index.57133cf9.js";import{d as e,b as a,G as o,h as r}from"./index.ca884bc4.js";import"./_plugin-vue_export-helper.cdc0426e.js";const n=e({name:"Index"}),i=e({...n,setup(s){return(c,_)=>(a(),o(r(t),{active:"2"}))}});export{i as default};
